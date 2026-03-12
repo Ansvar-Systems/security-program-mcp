@@ -1,0 +1,328 @@
+---
+id: governance-isms-steering
+type: governance_structure
+category: compliance
+title: "ISMS Steering Committee Governance Structure"
+summary: "Committee structure for governing an Information Security Management System, including board-level oversight, operational steering, and working group coordination."
+source: "ISO 27001:2022 Clause 5, ISACA governance framework"
+tags: "governance, isms, steering-committee, board, oversight, iso27001"
+metadata:
+  committees: "3 (Board Security Subcommittee, ISMS Steering Committee, Security Working Group)"
+  reporting_cadence: "Board: quarterly, Steering: monthly, Working Group: bi-weekly"
+content: |
+  ## ISMS Governance Structure
+
+  ### Tier 1: Board Security Subcommittee
+  **Purpose:** Strategic oversight of information security and risk management
+  **Composition:** 2-3 board members, CEO, CISO (invited)
+  **Cadence:** Quarterly
+  **Agenda:**
+  - Cybersecurity risk posture summary
+  - Material incidents since last meeting
+  - Security program progress against objectives
+  - Budget and resource decisions
+  - Regulatory compliance status
+  **Authority:** Approve security policy, approve risk appetite, allocate strategic budget
+  **Output:** Meeting minutes, decisions log, action items
+
+  ### Tier 2: ISMS Steering Committee
+  **Purpose:** Operational governance of the ISMS, cross-functional coordination
+  **Composition:** CISO (chair), CTO, CFO representative, Legal, HR, Business Unit leads (rotating), Internal Audit
+  **Cadence:** Monthly
+  **Agenda:**
+  - Risk register review (new risks, changed risks, accepted risks)
+  - Control implementation progress
+  - Incident summary and lessons learned
+  - Audit findings and corrective actions
+  - Vendor security issues
+  - Awareness training metrics
+  - Upcoming changes (regulations, organization, technology)
+  **Authority:** Approve risk treatment plans, approve policy changes, assign resources to security projects
+  **Output:** Meeting minutes, updated risk register, action items, escalations to Board
+
+  ### Tier 3: Security Working Group
+  **Purpose:** Tactical coordination of security operations and projects
+  **Composition:** CISO or Security Manager (chair), Security Engineers, SOC Lead, IT Operations Lead, GRC Analyst, project-specific participants
+  **Cadence:** Bi-weekly
+  **Agenda:**
+  - Open security projects status
+  - Vulnerability management metrics
+  - Detection and response operational status
+  - Upcoming changes requiring security review
+  - Technical issue resolution
+  **Authority:** Prioritize operational work, assign tasks within security team, escalate to Steering Committee
+  **Output:** Task assignments, escalations, status updates
+
+  ### Reporting Flow
+  ```
+  Board Security Subcommittee (quarterly)
+       ^
+       |  Quarterly security report
+       |
+  ISMS Steering Committee (monthly)
+       ^
+       |  Monthly operational summary
+       |
+  Security Working Group (bi-weekly)
+  ```
+
+  ### Key Governance Documents
+  - Terms of reference for each committee
+  - Decisions log (who decided what, when, with what authority)
+  - Risk acceptance register (formal sign-off records)
+  - Meeting minutes template with action tracking
+
+---
+id: governance-soc2-controls
+type: governance_structure
+category: compliance
+title: "SOC 2 Control Governance Structure"
+summary: "Governance structure for maintaining SOC 2 compliance, including control ownership, evidence management, and continuous monitoring across trust service categories."
+source: "AICPA Trust Services Criteria, SOC 2 reporting best practices"
+tags: "governance, soc2, controls, evidence, monitoring, trust-services"
+metadata:
+  committees: "2 (SOC 2 Steering, Control Owners Forum)"
+  reporting_cadence: "Steering: monthly, Control Owners: bi-weekly"
+content: |
+  ## SOC 2 Control Governance Structure
+
+  ### SOC 2 Steering Committee
+  **Purpose:** Oversight of SOC 2 compliance program, audit readiness, and remediation
+  **Composition:** CISO (chair), VP Engineering, VP Operations, Compliance Manager, Legal
+  **Cadence:** Monthly (weekly during audit periods)
+  **Responsibilities:**
+  - Approve control matrix changes
+  - Review compliance metrics (SLA adherence, evidence gaps, exception count)
+  - Approve exceptions and compensating controls
+  - Manage auditor relationship and audit timeline
+  - Approve system description changes
+
+  ### Control Owners Forum
+  **Purpose:** Operational coordination of evidence collection and control execution
+  **Composition:** Compliance Manager (facilitator), all control owners (Engineering, IT, HR, etc.)
+  **Cadence:** Bi-weekly
+  **Responsibilities:**
+  - Review evidence collection status (dashboard walkthrough)
+  - Address evidence gaps and quality issues
+  - Coordinate cross-team control dependencies
+  - Share upcoming changes that affect controls
+
+  ### Control Ownership Model
+  Each control has:
+  - **Control Owner:** Person accountable for the control operating as designed
+  - **Evidence Collector:** Person who gathers and submits evidence (may be same as owner)
+  - **Reviewer:** Person who validates evidence quality (typically Compliance Manager)
+
+  | Trust Service Category | Primary Control Owner | Evidence Cadence |
+  |----------------------|---------------------|-----------------|
+  | CC1 (Control Environment) | CISO / CEO | Annual |
+  | CC2 (Communication) | Compliance Manager | Monthly |
+  | CC3 (Risk Assessment) | CISO | Annual |
+  | CC4 (Monitoring) | Compliance Manager | Monthly |
+  | CC5 (Control Activities) | Department Heads | Monthly |
+  | CC6 (Access Controls) | IT Operations Lead | Monthly |
+  | CC7 (System Operations) | VP Engineering | Monthly |
+  | CC8 (Change Management) | VP Engineering | Monthly |
+  | CC9 (Risk Mitigation) | CISO | Quarterly |
+  | Availability | VP Engineering | Monthly |
+  | Confidentiality | CISO | Monthly |
+
+  ### Continuous Monitoring
+  - Evidence collection calendar with automated reminders
+  - Monthly compliance dashboard showing: controls operating, evidence collected, exceptions open
+  - Quarterly self-assessment against each criterion
+  - Pre-audit readiness check (30 days before audit period ends)
+
+---
+id: governance-security-program-office
+type: governance_structure
+category: risk-management
+title: "Security Program Management Office (PMO) Structure"
+summary: "Governance structure for managing a portfolio of security projects, including prioritization framework, resource allocation, progress reporting, and stakeholder management."
+source: "PMI PMBOK, ISACA governance framework, NIST CSF organizational profiles"
+tags: "governance, pmo, program-management, portfolio, prioritization, reporting"
+metadata:
+  committees: "3 (Security Portfolio Board, Program Delivery Team, Project Teams)"
+  reporting_cadence: "Portfolio Board: monthly, Delivery Team: weekly, Projects: per-project"
+content: |
+  ## Security Program Management Office Structure
+
+  ### Security Portfolio Board
+  **Purpose:** Prioritize, fund, and oversee the portfolio of security initiatives
+  **Composition:** CISO (chair), CTO, CFO, Business Unit VPs, Program Manager
+  **Cadence:** Monthly
+  **Responsibilities:**
+  - Review and approve new project proposals
+  - Prioritize projects based on risk reduction, regulatory requirement, and business value
+  - Allocate resources across projects
+  - Review overall portfolio health
+  - Make go/no-go decisions at phase gates
+  - Resolve cross-project conflicts
+
+  ### Prioritization Framework
+  Score each proposed project (1-5) on:
+  - **Risk reduction:** How much does this reduce the organization's top risks?
+  - **Regulatory driver:** Is this required by regulation or audit finding? (Binary: required = 5)
+  - **Business enablement:** Does this enable revenue or remove a sales blocker?
+  - **Effort:** Inverse score (low effort = 5, high effort = 1)
+  - **Dependencies:** Can this start now or does it depend on other projects?
+
+  Total score determines portfolio slot. Required-by-regulation projects always score highest.
+
+  ### Program Delivery Team
+  **Purpose:** Coordinate execution across active security projects
+  **Composition:** Program Manager (lead), Project Managers, Technical Leads
+  **Cadence:** Weekly
+  **Responsibilities:**
+  - Review project status (on track, at risk, blocked)
+  - Manage resource conflicts
+  - Identify and escalate risks
+  - Coordinate dependencies between projects
+  - Prepare portfolio report for Board
+
+  ### Status Reporting
+  - **Weekly:** Project status (RAG) with key metrics, blockers, decisions needed
+  - **Monthly:** Portfolio dashboard for Board (budget burn, timeline adherence, risk reduction achieved)
+  - **Quarterly:** Strategic alignment review (are projects delivering expected risk reduction?)
+
+  ### Portfolio Health Metrics
+  - Projects on track vs. at risk vs. blocked
+  - Budget spent vs. planned
+  - Risk reduction achieved vs. projected
+  - Resource utilization (over/under-allocated)
+  - Average project cycle time
+
+---
+id: governance-nis2-compliance
+type: governance_structure
+category: compliance
+title: "NIS2 Compliance Governance Structure"
+summary: "Governance structure meeting NIS2 Article 20 management body accountability requirements, including management training, cybersecurity oversight, and compliance reporting."
+source: "NIS2 Directive Article 20, ENISA governance guidance"
+tags: "governance, nis2, management-body, accountability, oversight, eu"
+metadata:
+  committees: "3 (Management Body, Cybersecurity Committee, Operational Team)"
+  reporting_cadence: "Management Body: quarterly, Committee: monthly, Operational: weekly"
+content: |
+  ## NIS2 Compliance Governance Structure
+
+  ### Management Body (Article 20 Compliance)
+  **Purpose:** Fulfil NIS2 Article 20 requirement for management body accountability
+  **Composition:** Board of Directors or equivalent management body
+  **Cadence:** Quarterly cybersecurity briefing (minimum)
+  **Responsibilities:**
+  - Approve cybersecurity risk management measures (Article 20(1))
+  - Oversee implementation of Article 21 measures
+  - Complete cybersecurity training (Article 20(2))
+  - Accept personal accountability for compliance failures
+  **Required Training Topics:**
+  - NIS2 obligations and personal liability
+  - Cybersecurity risk landscape relevant to the entity
+  - Risk management principles and the entity's risk posture
+  - Incident reporting obligations and timelines
+
+  ### Cybersecurity Committee
+  **Purpose:** Operational oversight of NIS2 compliance across all 10 Article 21 measures
+  **Composition:** CISO (chair), CTO, Legal, Operations, HR, key Business Unit leads
+  **Cadence:** Monthly
+  **Agenda by Article 21 Measure:**
+  1. Risk analysis and policy status
+  2. Incident handling metrics and readiness
+  3. Business continuity test results
+  4. Supply chain security status
+  5. System security project progress
+  6. Effectiveness assessment results
+  7. Training completion metrics
+  8. Cryptography implementation status
+  9. HR security and access control metrics
+  10. MFA and secure communications status
+  **Output:** Monthly compliance dashboard for management body
+
+  ### Operational Team
+  **Purpose:** Execute NIS2 compliance activities day-to-day
+  **Composition:** Security Manager, GRC Analyst, Security Engineers, IT Operations
+  **Cadence:** Weekly
+  **Responsibilities:**
+  - Implement and maintain Article 21 controls
+  - Manage incident response readiness
+  - Conduct vulnerability management
+  - Maintain supplier security assessments
+  - Collect evidence for compliance reporting
+
+  ### Competent Authority Interface
+  - Designated contact point for communications with national competent authority
+  - Registration maintained and updated as required
+  - Incident notification workflow tested and documented
+  - Prepared for potential inspections or audits
+
+---
+id: governance-dora-oversight
+type: governance_structure
+category: compliance
+title: "DORA ICT Risk Governance Structure"
+summary: "Governance structure for DORA compliance including management body oversight, ICT risk management function, resilience testing governance, and third-party oversight committee."
+source: "DORA Regulation (EU) 2022/2554, EBA guidelines on ICT risk management"
+tags: "governance, dora, ict-risk, financial-services, resilience, third-party"
+metadata:
+  committees: "4 (Management Body, ICT Risk Committee, Resilience Testing Board, Third-Party Oversight)"
+  reporting_cadence: "Management Body: quarterly, ICT Risk: monthly, Testing: quarterly, Third-Party: monthly"
+content: |
+  ## DORA ICT Risk Governance Structure
+
+  ### Management Body (Article 5)
+  **Purpose:** Ultimate responsibility for ICT risk management
+  **Composition:** Board of Directors or senior management body
+  **Cadence:** Quarterly ICT risk review (minimum)
+  **Responsibilities:**
+  - Define and approve ICT risk management framework
+  - Approve ICT risk tolerance and appetite
+  - Allocate budget for digital operational resilience
+  - Review and approve ICT business continuity policy
+  - Approve major ICT projects and changes
+  - Review results of resilience testing
+  **DORA-Specific Requirements:**
+  - Must actively engage in ICT risk management (not delegable)
+  - Must approve all ICT-related policies
+  - Must complete training on ICT risks (at least annually)
+
+  ### ICT Risk Committee
+  **Purpose:** Oversee day-to-day ICT risk management per Articles 6-16
+  **Composition:** CRO or ICT Risk Manager (chair), CISO, CTO, Operations Head, Compliance
+  **Cadence:** Monthly
+  **Agenda:**
+  - ICT risk register review
+  - Incident handling metrics (classification, reporting compliance)
+  - ICT asset inventory updates
+  - Protection measure effectiveness
+  - Recovery capability status
+  - Budget utilization
+  **Output:** Monthly ICT risk report to management body
+
+  ### Resilience Testing Board
+  **Purpose:** Govern the digital operational resilience testing program (Articles 24-27)
+  **Composition:** CISO (chair), CTO, External Testing Lead, Business Continuity Manager
+  **Cadence:** Quarterly
+  **Responsibilities:**
+  - Approve annual testing program
+  - Review testing results and remediation progress
+  - Oversee TLPT engagements (if designated)
+  - Report to management body on resilience posture
+  - Approve testing vendor selection
+
+  ### Third-Party Oversight Committee (Articles 28-44)
+  **Purpose:** Manage ICT third-party risk including contractual compliance and concentration risk
+  **Composition:** Vendor Manager (chair), CISO, Legal, Procurement, Business Owners
+  **Cadence:** Monthly
+  **Responsibilities:**
+  - Maintain ICT third-party service provider register
+  - Monitor contractual compliance (Article 30)
+  - Assess and monitor concentration risk
+  - Review sub-outsourcing arrangements
+  - Maintain exit strategies for critical providers
+  - Interface with supervisory authorities on CTP designations
+
+  ### Reporting to Competent Authority
+  - Incident reports per Article 19-20 timelines
+  - ICT third-party register on request
+  - TLPT results when required
+  - Annual resilience testing summary

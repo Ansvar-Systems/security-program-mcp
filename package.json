@@ -1,0 +1,29 @@
+{
+  "name": "@ansvar/security-program-mcp",
+  "version": "1.0.0",
+  "description": "Security program planning methodologies — implementation playbooks, RACI templates, WBS patterns, milestone frameworks, governance structures. Part of the Ansvar MCP Network (ansvar.ai/mcp)",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/http-server.js",
+    "dev": "tsx src/http-server.ts",
+    "build:db": "tsx scripts/build-db.ts",
+    "test": "node --import tsx --test src/tests/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "better-sqlite3": "^12.6.2",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "author": "Ansvar Systems <hello@ansvar.eu> (https://ansvar.eu)",
+  "license": "Apache-2.0"
+}

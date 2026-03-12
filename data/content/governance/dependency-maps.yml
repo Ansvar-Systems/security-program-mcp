@@ -1,0 +1,278 @@
+---
+id: depmap-iso27001
+type: dependency_map
+category: compliance
+title: "ISO 27001 Implementation Dependency Map"
+summary: "Prerequisite chains and critical path for ISO 27001 implementation activities, showing which activities must complete before others can start."
+source: "ISO 27001:2022, ISO 27003"
+tags: "dependencies, iso27001, isms, critical-path, prerequisites"
+metadata:
+  critical_path: "Scope -> Risk Assessment -> SoA -> Control Implementation -> Internal Audit -> Management Review -> Certification"
+content: |
+  ## ISO 27001 Dependency Map
+
+  ### Critical Path
+  ```
+  Scope Definition (Cl.4.3)
+    -> Risk Assessment (Cl.6.1.2)
+      -> Statement of Applicability (Cl.6.1.3)
+        -> Control Implementation (Cl.8)
+          -> Internal Audit (Cl.9.2)
+            -> Management Review (Cl.9.3)
+              -> Stage 1 Audit
+                -> Stage 2 Audit
+  ```
+
+  ### Full Dependency Table
+
+  | Activity | Depends On | Blocks |
+  |----------|-----------|--------|
+  | Context analysis (4.1) | None | Scope definition |
+  | Interested parties (4.2) | None | Scope definition |
+  | Scope definition (4.3) | Context, Interested parties | Risk assessment, Policy |
+  | Information security policy (5.2) | Scope | Control implementation |
+  | Roles and responsibilities (5.3) | Scope | All operational activities |
+  | Risk assessment methodology | Scope | Risk assessment |
+  | Asset inventory | Scope | Risk assessment |
+  | Risk assessment (6.1.2) | Methodology, Asset inventory | SoA, Risk treatment plan |
+  | SoA (6.1.3) | Risk assessment | Control implementation |
+  | Risk treatment plan | Risk assessment | Control implementation |
+  | Security objectives (6.2) | Policy, Risk assessment | Monitoring |
+  | Competence requirements (7.2) | Roles | Training |
+  | Awareness training (7.3) | Policy, Competence | Internal audit |
+  | Document control (7.5) | None (start early) | All documentation |
+  | Control implementation (8) | SoA, Risk treatment plan | Internal audit |
+  | Monitoring and measurement (9.1) | Objectives, Controls | Management review |
+  | Internal audit (9.2) | Controls implemented, Training delivered | Management review, Corrective actions |
+  | Corrective actions (10.1) | Internal audit | Management review, Stage 1 |
+  | Management review (9.3) | Internal audit, Monitoring | Stage 1 audit |
+  | Stage 1 audit | Management review, All documentation | Stage 2 audit |
+  | Stage 2 audit | Stage 1 findings resolved, 3+ months operation | Certificate |
+
+  ### Parallel Work Streams
+  - Policy development can run parallel with risk assessment (after scope is defined)
+  - Technical control implementation can start on obvious items while SoA is being finalized
+  - Training program development can start while controls are being implemented
+  - Document control should be established at project start (supports everything else)
+
+  ### Common Bottlenecks
+  - Risk assessment often takes longer than planned (asset inventory is incomplete)
+  - SoA approval delayed when management questions control exclusions
+  - Internal audit availability (must be independent, often needs external resource)
+  - Stage 2 timing requires minimum operating period (typically 3 months of evidence)
+
+---
+id: depmap-soc2
+type: dependency_map
+category: compliance
+title: "SOC 2 Preparation Dependency Map"
+summary: "Prerequisite chains for SOC 2 Type II preparation showing the relationship between scope definition, control design, evidence collection, and audit engagement."
+source: "AICPA Trust Services Criteria, SOC 2 preparation practices"
+tags: "dependencies, soc2, audit, evidence, controls, critical-path"
+metadata:
+  critical_path: "Scope -> Control Matrix -> Implementation -> Observation Period -> Audit"
+content: |
+  ## SOC 2 Preparation Dependency Map
+
+  ### Critical Path
+  ```
+  Trust Service Category Selection
+    -> System Description
+      -> Control Matrix
+        -> Control Implementation
+          -> Evidence Collection (Observation Period Start)
+            -> [3-12 months observation]
+              -> Auditor Engagement
+                -> Audit Execution
+                  -> SOC 2 Report
+  ```
+
+  ### Full Dependency Table
+
+  | Activity | Depends On | Blocks |
+  |----------|-----------|--------|
+  | TSC category selection | Business requirements | System description |
+  | System description boundaries | TSC selection | Control matrix, Auditor scope |
+  | Subservice org identification | System boundaries | Carve-out/inclusive decision |
+  | Readiness assessment | System boundaries | Remediation plan |
+  | Control matrix design | System description, TSC mapping | Control implementation |
+  | Policy documentation | Control matrix | Evidence (policies as evidence) |
+  | Technical control implementation | Control matrix | Evidence collection |
+  | Operational control implementation | Control matrix, Policies | Evidence collection |
+  | Evidence collection setup | Control matrix | Observation period |
+  | Observation period start | Controls implemented | Audit engagement |
+  | Automated evidence collection | Evidence setup | Reduces manual effort |
+  | Access reviews (quarterly) | Access control implementation | Evidence |
+  | Backup restore tests | Backup implementation | Evidence |
+  | Vendor SOC report reviews | Subservice org identification | Evidence |
+  | Auditor selection | Budget approval | Audit scheduling |
+  | Audit engagement letter | Auditor selected, Scope agreed | Audit execution |
+  | Audit execution | Observation period (minimum 3 months) | SOC 2 report |
+  | Management response | Audit findings | Final report |
+
+  ### Parallel Work Streams
+  - Policy writing and technical implementation can run in parallel
+  - Auditor selection can happen while controls are being implemented
+  - Evidence collection starts as soon as each control is operational (not all at once)
+
+  ### Common Bottlenecks
+  - Observation period length: Type II requires minimum 3 months; 6-12 months is standard for first report
+  - Subservice organization SOC reports may not be available on your timeline
+  - Evidence gaps discovered late in observation period require restart for affected controls
+
+---
+id: depmap-incident-response
+type: dependency_map
+category: security-operations
+title: "Incident Response Program Dependency Map"
+summary: "Prerequisite chains for building an incident response capability showing relationships between team formation, tooling, playbooks, and validation."
+source: "NIST SP 800-61r3, SANS Incident Handler's Handbook"
+tags: "dependencies, incident-response, csirt, detection, playbooks"
+metadata:
+  critical_path: "Team Formation -> Policy/Classification -> Playbooks -> Detection Rules -> Validation Exercise"
+content: |
+  ## Incident Response Program Dependency Map
+
+  ### Critical Path
+  ```
+  IR Team Appointment
+    -> IR Policy and Classification Scheme
+      -> Playbook Development
+        -> Detection Rule Deployment
+          -> Tabletop Exercise
+            -> Operational Readiness
+  ```
+
+  ### Full Dependency Table
+
+  | Activity | Depends On | Blocks |
+  |----------|-----------|--------|
+  | IR Manager appointment | Management approval | Team formation |
+  | Team formation | IR Manager | Playbook development, Detection |
+  | IR policy | IR Manager | Classification scheme |
+  | Classification scheme | IR policy | Playbooks, Detection rules |
+  | On-call roster | Team formation | Operational readiness |
+  | Out-of-band comms setup | None (start immediately) | Operational readiness |
+  | Contact list creation | Team formation | Playbooks (notification sections) |
+  | Playbook development | Classification, Contact list | Detection rules, Tabletop |
+  | SIEM deployment/config | Budget approval | Detection rules |
+  | EDR deployment | Budget approval | Containment capability |
+  | Detection rule development | SIEM, Playbooks | Alert triage |
+  | Alert triage workflow | Detection rules, Team | Operational readiness |
+  | Evidence collection tools | Budget approval | Forensic capability |
+  | Evidence procedures | Evidence tools, Legal input | Playbooks, Exercises |
+  | Tabletop exercise | Playbooks, Team, Comms | Operational readiness |
+  | Purple team exercise | Detection rules, Playbooks | Validation |
+  | Regulatory notification workflow | Legal review, Contact list | Compliance readiness |
+  | Metrics definition | Operational readiness | Reporting |
+
+  ### Parallel Work Streams
+  - SIEM/EDR deployment (technology) runs parallel with playbook development (process)
+  - Contact list and communication setup run parallel with policy development
+  - Training can start as soon as team is formed (doesn't need to wait for all playbooks)
+
+  ### Common Bottlenecks
+  - SIEM deployment often takes longer than expected (log source onboarding)
+  - Legal review of notification procedures can delay playbook finalization
+  - Finding qualified IR staff (tight market for experienced analysts)
+
+---
+id: depmap-security-program
+type: dependency_map
+category: risk-management
+title: "Security Program Initialization Dependency Map"
+summary: "Prerequisite chains for initializing a security program from scratch, showing relationships between governance, risk assessment, capability building, and compliance activities."
+source: "ISACA governance framework, NIST CSF 2.0"
+tags: "dependencies, security-program, governance, risk, capabilities"
+metadata:
+  critical_path: "Executive Sponsorship -> Risk Assessment -> Capability Priorities -> Implementation -> Measurement"
+content: |
+  ## Security Program Initialization Dependency Map
+
+  ### Critical Path
+  ```
+  Executive Sponsorship & Budget
+    -> CISO/Security Lead Hired
+      -> Risk Assessment
+        -> Capability Prioritization
+          -> Implementation (parallel streams)
+            -> Measurement & Reporting
+  ```
+
+  ### Full Dependency Table
+
+  | Activity | Depends On | Blocks |
+  |----------|-----------|--------|
+  | Executive sponsorship | Business case | Budget, CISO hire |
+  | Budget allocation | Executive sponsorship | All implementation |
+  | CISO/Security Lead hire | Budget | Risk assessment, Governance |
+  | Security team formation | CISO, Budget | All operational activities |
+  | Governance structure | CISO | Policy framework |
+  | Security policy framework | Governance structure | All compliance activities |
+  | Asset inventory | Security team | Risk assessment |
+  | Risk assessment | Assets, CISO, Methodology | Capability priorities |
+  | Capability prioritization | Risk assessment | Implementation streams |
+  | IAM/Access control | Priority decision, Budget | Other controls |
+  | Vulnerability management | Priority decision, Asset inventory | Remediation |
+  | Incident response | Priority decision, Team | Detection capability |
+  | Security monitoring | Priority decision, SIEM budget | Detection and response |
+  | Security awareness | Policy framework, Team | Compliance readiness |
+  | Compliance framework selection | Business requirements | Compliance program |
+  | Compliance program | Framework selection, Controls | Audit readiness |
+  | Metrics and reporting | Capabilities operational | Executive visibility |
+  | Board reporting | Metrics, Governance | Ongoing budget justification |
+
+  ### Priority Sequencing (typical)
+  1. **Month 1-2:** Governance, policy, asset inventory, risk assessment
+  2. **Month 2-4:** IAM/access control, vulnerability management (most risk reduction per effort)
+  3. **Month 3-6:** Incident response, security monitoring
+  4. **Month 4-8:** Compliance program, awareness training
+  5. **Month 6-12:** Advanced capabilities (threat hunting, red teaming, DLP)
+
+---
+id: depmap-dora
+type: dependency_map
+category: compliance
+title: "DORA Implementation Dependency Map"
+summary: "Prerequisite chains for DORA compliance showing relationships between the five pillars: ICT risk management, incident reporting, resilience testing, third-party management, and information sharing."
+source: "DORA Regulation (EU) 2022/2554"
+tags: "dependencies, dora, financial-services, ict-risk, resilience, five-pillars"
+metadata:
+  critical_path: "Gap Analysis -> ICT Risk Framework -> Incident Classification -> Testing Program -> Ongoing Compliance"
+content: |
+  ## DORA Implementation Dependency Map
+
+  ### Pillar Dependencies
+  ```
+  Entity Classification
+    -> Gap Analysis (all 5 pillars)
+      -> Pillar 1: ICT Risk Management Framework
+        -> Pillar 2: Incident Reporting (depends on P1 classification)
+        -> Pillar 3: Resilience Testing (depends on P1 asset inventory)
+        -> Pillar 4: Third-Party Management (depends on P1 governance)
+      -> Pillar 5: Information Sharing (independent, can start anytime)
+  ```
+
+  ### Cross-Pillar Dependencies
+
+  | Activity | Pillar | Depends On | Blocks |
+  |----------|--------|-----------|--------|
+  | ICT risk management framework | P1 | Entity classification | P2, P3, P4 |
+  | ICT asset inventory | P1 | Framework approval | P3 testing scope |
+  | Protection measures | P1 | Asset inventory | P3 testing targets |
+  | Detection capabilities | P1 | Protection measures | P2 classification |
+  | Incident classification | P2 | P1 detection, RTS criteria | P2 reporting workflow |
+  | Reporting workflow | P2 | Classification scheme | Operational readiness |
+  | CSIRT contact | P2 | None (start early) | P2 reporting |
+  | Basic testing program | P3 | P1 asset inventory | TLPT readiness |
+  | TLPT (if designated) | P3 | Basic testing, Budget | Regulatory reporting |
+  | Third-party register | P4 | P1 governance framework | Contract remediation |
+  | Contract review | P4 | Register, Legal review | Compliance |
+  | Concentration risk assessment | P4 | Register complete | Risk treatment |
+  | Information sharing | P5 | None (voluntary) | None |
+
+  ### Common Bottlenecks
+  - ICT asset inventory is foundation for both testing (P3) and risk management (P1)
+  - Contract renegotiation with third parties (P4) can take 6+ months
+  - TLPT requires qualified external testers with availability constraints
+  - RTS/ITS finalization may require revisiting earlier work

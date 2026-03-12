@@ -1,0 +1,214 @@
+id: zero-trust-rollout
+type: playbook
+category: architecture
+title: "Zero Trust Architecture Rollout Playbook"
+summary: "6-phase, 18-month rollout plan for Zero Trust architecture covering identity foundation, device trust, network segmentation, application access, data protection, and continuous verification."
+source: "NIST SP 800-207, CISA Zero Trust Maturity Model, Forrester ZTX"
+tags: "zero-trust, architecture, identity, microsegmentation, device-trust, nist-800-207"
+metadata:
+  duration: "18 months"
+  phases: "6"
+  target_org_size: "Medium to large (200+ employees)"
+  frameworks: "NIST SP 800-207, CISA ZTMM"
+content: |
+  ## Phase 1: Strategy and Identity Foundation (Months 1-3)
+
+  ### Objective
+  Define the Zero Trust strategy and establish the identity management foundation.
+
+  ### Activities
+
+  **1.1 Zero Trust Strategy**
+  - Assess current architecture against CISA Zero Trust Maturity Model pillars: Identity, Devices, Networks, Applications/Workloads, Data
+  - Define target maturity level for each pillar (Traditional, Initial, Advanced, Optimal)
+  - Identify protect surfaces: critical data, assets, applications, and services (DAAS)
+  - Map transaction flows for each protect surface
+  - Principle: "never trust, always verify" -- every access request is authenticated, authorized, and encrypted regardless of network location
+
+  **1.2 Identity Provider Consolidation**
+  - Inventory all identity sources (Active Directory, cloud IdPs, local accounts, service accounts)
+  - Consolidate to a single authoritative identity provider where possible
+  - Implement single sign-on (SSO) for all applications
+  - Deploy multi-factor authentication (MFA) for all users -- start with privileged users, then expand to all
+  - Implement conditional access policies based on user risk, device state, and location
+
+  **1.3 Identity Governance**
+  - Implement automated user lifecycle management (joiner/mover/leaver)
+  - Deploy privileged access management (PAM) for administrative accounts
+  - Establish just-in-time (JIT) and just-enough-access (JEA) for privileged operations
+  - Implement regular access certification reviews (quarterly for privileged, semi-annual for standard)
+
+  ### Deliverables
+  - Zero Trust strategy document
+  - Protect surface inventory
+  - Consolidated identity provider
+  - MFA deployed for all users
+  - PAM solution deployed
+
+  ---
+
+  ## Phase 2: Device Trust (Months 3-6)
+
+  ### Objective
+  Establish device identity and health as a condition for access.
+
+  ### Activities
+
+  **2.1 Device Inventory and Management**
+  - Deploy endpoint management solution (MDM/UEM) for all corporate devices
+  - Establish device registration and identity (device certificates or hardware attestation)
+  - Define device health baseline: OS version, patch level, encryption status, EDR agent running, firewall enabled
+
+  **2.2 Device Compliance Policies**
+  - Define compliance policies: compliant devices get standard access, non-compliant devices get restricted or no access
+  - Implement device posture checking at authentication time
+  - Create remediation workflow for non-compliant devices
+
+  **2.3 BYOD Strategy**
+  - Define BYOD access levels: full access (managed), limited access (app-level management), no access
+  - Implement application-level controls for unmanaged devices (browser isolation, DLP, session controls)
+  - Require minimum security posture for BYOD (screen lock, OS version, no jailbreak)
+
+  ### Deliverables
+  - Device inventory (100% coverage)
+  - Device compliance policies enforced
+  - BYOD access policy
+  - Device health dashboard
+
+  ---
+
+  ## Phase 3: Network Segmentation (Months 5-9)
+
+  ### Objective
+  Replace perimeter-based network trust with microsegmentation and encrypted communications.
+
+  ### Activities
+
+  **3.1 Network Architecture Assessment**
+  - Map current network topology and trust zones
+  - Identify lateral movement paths
+  - Inventory all network-to-network connections (VPN, peering, direct)
+
+  **3.2 Microsegmentation**
+  - Define segments based on protect surfaces (not traditional network zones)
+  - Implement microsegmentation for critical workloads: database tiers, application tiers, management planes
+  - Deploy next-generation firewalls or software-defined perimeter at segment boundaries
+  - Default deny between segments -- allow only documented and approved flows
+  - Start with the most critical protect surface, then expand
+
+  **3.3 Encrypted Communications**
+  - Implement TLS for all internal east-west traffic (not just north-south)
+  - Deploy mutual TLS (mTLS) for service-to-service communication
+  - Eliminate unencrypted protocols from internal networks
+  - Implement DNS security (DoH/DoT, DNSSEC)
+
+  **3.4 Remote Access Transformation**
+  - Replace traditional VPN with Zero Trust Network Access (ZTNA)
+  - ZTNA provides per-application access instead of full network access
+  - Implement continuous session validation (not just authentication at connection time)
+
+  ### Deliverables
+  - Network segmentation design
+  - Microsegmentation deployed for critical workloads
+  - ZTNA replacing VPN for remote access
+  - East-west encryption deployed
+
+  ---
+
+  ## Phase 4: Application Access Controls (Months 8-12)
+
+  ### Objective
+  Implement per-application access controls with continuous authorization.
+
+  ### Activities
+
+  **4.1 Application Inventory and Classification**
+  - Inventory all applications (SaaS, internal, legacy)
+  - Classify by data sensitivity and business criticality
+  - Identify applications that cannot support modern authentication
+
+  **4.2 Application-Level Access**
+  - Implement application-aware proxy or ZTNA gateway
+  - Configure per-application access policies combining: user identity, device health, location, time, behavior risk score
+  - Eliminate implicit trust from network location
+  - Deploy web application firewalls for externally facing applications
+
+  **4.3 API Security**
+  - Implement API gateway with authentication and authorization
+  - Deploy API rate limiting and anomaly detection
+  - Use OAuth 2.0 / OpenID Connect for API authentication
+  - Implement API-level access control (scope-based authorization)
+
+  **4.4 Legacy Application Handling**
+  - For applications that cannot support modern auth: deploy an access proxy or gateway in front
+  - Isolate legacy applications in restricted network segments
+  - Plan migration or replacement timeline
+
+  ### Deliverables
+  - Application access policies per app
+  - ZTNA or access proxy deployed
+  - API gateway with authentication
+  - Legacy application isolation plan
+
+  ---
+
+  ## Phase 5: Data Protection (Months 11-15)
+
+  ### Objective
+  Implement data-centric security controls that travel with the data.
+
+  ### Activities
+
+  **5.1 Data Classification**
+  - Implement data classification scheme (Public, Internal, Confidential, Restricted)
+  - Deploy automated classification tools where feasible
+  - Label data stores and repositories by classification level
+
+  **5.2 Data Loss Prevention**
+  - Deploy DLP on endpoints, network, and cloud services
+  - Define DLP policies based on data classification
+  - Monitor and respond to DLP alerts
+  - Focus on exfiltration paths: email, cloud storage, USB, web upload
+
+  **5.3 Data Access Controls**
+  - Implement attribute-based access control (ABAC) for sensitive data stores
+  - Enforce encryption at rest for Confidential and Restricted data
+  - Implement database activity monitoring for critical databases
+  - Deploy rights management for document-level protection where needed
+
+  ### Deliverables
+  - Data classification scheme deployed
+  - DLP policies active
+  - ABAC for sensitive data stores
+  - Database activity monitoring operational
+
+  ---
+
+  ## Phase 6: Continuous Verification and Optimization (Months 14-18)
+
+  ### Objective
+  Establish continuous monitoring, behavioral analytics, and automated response for the Zero Trust environment.
+
+  ### Activities
+
+  **6.1 Continuous Monitoring**
+  - Deploy SIEM with Zero Trust telemetry (identity, device, network, application, data)
+  - Implement user and entity behavior analytics (UEBA)
+  - Monitor for: impossible travel, unusual data access patterns, privilege escalation, lateral movement indicators
+
+  **6.2 Automated Response**
+  - Implement SOAR playbooks for common Zero Trust policy violations
+  - Automated responses: step-up authentication, session termination, device quarantine, access revocation
+  - Define human-in-the-loop thresholds for high-impact automated actions
+
+  **6.3 Maturity Assessment**
+  - Reassess against CISA Zero Trust Maturity Model
+  - Document maturity advancement per pillar
+  - Identify areas needing further investment
+  - Plan next maturity level targets
+
+  ### Deliverables
+  - Continuous monitoring operational
+  - SOAR playbooks for Zero Trust events
+  - Maturity assessment report
+  - Next-phase roadmap

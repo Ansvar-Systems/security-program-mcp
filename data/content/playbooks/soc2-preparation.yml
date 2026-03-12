@@ -1,0 +1,233 @@
+id: soc2-preparation
+type: playbook
+category: compliance
+title: "SOC 2 Type II Preparation Playbook"
+summary: "4-phase, 6-month preparation plan for SOC 2 Type II audit covering trust service criteria selection, control design, evidence collection, and audit readiness."
+source: "AICPA Trust Services Criteria (2017), SOC 2 reporting framework"
+tags: "soc2, aicpa, trust-services, audit, type-ii, evidence-collection"
+metadata:
+  duration: "6 months"
+  phases: "4"
+  target_org_size: "SaaS companies, cloud service providers, data processors"
+  frameworks: "SOC 2, AICPA Trust Services Criteria"
+content: |
+  ## Phase 1: Scoping and Readiness (Months 1-2)
+
+  ### Objective
+  Define the SOC 2 report scope, select trust service categories, and assess current control maturity.
+
+  ### Activities
+
+  **1.1 Trust Service Category Selection**
+  - Security (Common Criteria) -- mandatory for all SOC 2 reports
+  - Availability -- select if uptime SLAs are contractually committed
+  - Processing Integrity -- select if data processing accuracy is a customer concern
+  - Confidentiality -- select if handling confidential customer data
+  - Privacy -- select if processing personal information (consider if SOC 2+ Privacy or separate Privacy report)
+  - Start with Security only if this is the first SOC 2; add categories in subsequent years
+
+  **1.2 System Description Boundaries**
+  - Define the system: infrastructure, software, people, procedures, data
+  - Identify subservice organizations (cloud providers, SaaS tools) and their SOC reports
+  - Choose carve-out method (exclude subservice org controls, mention reliance) or inclusive method (include their controls)
+  - Document system boundaries clearly -- this becomes Section III of the SOC 2 report
+
+  **1.3 Readiness Assessment**
+  - Map current controls to Common Criteria (CC1-CC9):
+    - CC1: Control environment
+    - CC2: Communication and information
+    - CC3: Risk assessment
+    - CC4: Monitoring activities
+    - CC5: Control activities
+    - CC6: Logical and physical access controls
+    - CC7: System operations
+    - CC8: Change management
+    - CC9: Risk mitigation
+  - Identify control gaps and missing evidence
+  - Prioritize remediation by audit risk (high-traffic controls first)
+
+  ### Deliverables
+  - Scope document (trust service categories + system boundaries)
+  - Subservice organization inventory
+  - Readiness assessment report
+  - Remediation plan
+
+  ---
+
+  ## Phase 2: Control Design and Implementation (Months 2-4)
+
+  ### Objective
+  Design controls, implement missing controls, and establish evidence collection processes.
+
+  ### Activities
+
+  **2.1 Control Matrix Development**
+  - Create a control matrix mapping each trust service criterion to:
+    - Control description (what the control does)
+    - Control owner (who operates it)
+    - Control frequency (continuous, daily, weekly, monthly, quarterly, annual)
+    - Evidence type (screenshot, report, log, policy document, ticket)
+    - Testing method (inquiry, observation, inspection, re-performance)
+
+  **2.2 Key Control Areas**
+
+  Access Control (CC6):
+  - User provisioning/deprovisioning with approval workflow
+  - Quarterly access reviews with evidence of review and remediation
+  - Multi-factor authentication for production systems
+  - Role-based access control with principle of least privilege
+  - Privileged access management with session logging
+
+  Change Management (CC8):
+  - Code review requirements before merge to production
+  - Separation of duties between development and deployment
+  - Change approval workflow with evidence
+  - Rollback procedures
+  - Emergency change process with post-hoc approval
+
+  System Operations (CC7):
+  - Monitoring and alerting for system availability and security events
+  - Incident response procedures with documented incidents
+  - Backup procedures with tested restores
+  - Vulnerability management with scan results and remediation evidence
+
+  Risk Assessment (CC3):
+  - Annual risk assessment process
+  - Risk register with identified risks, likelihood, impact, treatment
+  - Management review of risk assessment results
+
+  **2.3 Policy and Procedure Documentation**
+  - Information security policy
+  - Acceptable use policy
+  - Access control policy
+  - Change management policy
+  - Incident response policy
+  - Data classification policy
+  - Vendor management policy
+  - Business continuity / disaster recovery plan
+  - Employee handbook (security sections)
+
+  **2.4 Evidence Collection Setup**
+  - Configure automated evidence collection where possible (SIEM logs, ticket system exports, cloud configuration snapshots)
+  - Create evidence collection calendar with monthly tasks
+  - Assign evidence owners for each control
+  - Test evidence retrieval for one full cycle
+
+  ### Deliverables
+  - Control matrix (all criteria mapped)
+  - Policy set (9+ policies)
+  - Evidence collection calendar
+  - Automated evidence collection configuration
+
+  ---
+
+  ## Phase 3: Observation Period and Evidence Collection (Months 3-5)
+
+  ### Objective
+  Operate controls for the observation period and collect evidence continuously. Type II requires at minimum a 3-month observation period (6-12 months is typical).
+
+  ### Activities
+
+  **3.1 Control Operation**
+  - Operate all controls as designed
+  - Key daily/weekly activities:
+    - Monitor security alerts and respond to incidents
+    - Process access requests and deprovisioning
+    - Review and approve code changes
+    - Run vulnerability scans (weekly minimum)
+  - Key monthly activities:
+    - Collect and organize evidence packages
+    - Review control effectiveness
+    - Address any control failures or exceptions
+  - Key quarterly activities:
+    - Conduct access reviews
+    - Test backup restoration
+    - Review vendor SOC reports
+    - Update risk register
+
+  **3.2 Exception Handling**
+  - When a control fails to operate as designed, document:
+    - What happened
+    - Root cause
+    - Compensating controls (if any)
+    - Corrective action taken
+    - Timeline to fix
+  - Auditors expect some exceptions -- the response matters more than perfection
+
+  **3.3 Evidence Organization**
+  - Maintain evidence repository organized by control ID
+  - Include timestamps, responsible parties, and context for each evidence item
+  - Common evidence types:
+    - Screenshots of configurations (with timestamps)
+    - System-generated reports (access lists, scan results)
+    - Ticket system exports showing approval workflows
+    - Meeting minutes and sign-off records
+    - Policy documents with version history
+
+  ### Deliverables
+  - Monthly evidence packages
+  - Exception log with remediation records
+  - Organized evidence repository
+
+  ---
+
+  ## Phase 4: Audit Execution (Months 5-6)
+
+  ### Objective
+  Engage the CPA firm, support the audit process, and receive the SOC 2 Type II report.
+
+  ### Activities
+
+  **4.1 Auditor Selection and Engagement**
+  - Select a CPA firm with SOC 2 experience in your industry
+  - Factors: AICPA membership, peer review results, industry specialization, timeline, cost
+  - Typical audit cost: USD 30K-80K for first SOC 2 Type II (depends on scope complexity)
+  - Engage early -- popular firms book 2-3 months ahead
+
+  **4.2 Audit Support**
+  - Provide system description draft for auditor review
+  - Prepare evidence for each control (organized by criteria)
+  - Schedule interviews with control owners
+  - Respond promptly to auditor information requests (IRLs)
+  - Address any preliminary findings before final report
+
+  **4.3 Report Types**
+  - Type I: Point-in-time design assessment (useful as stepping stone)
+  - Type II: Effectiveness over an observation period (the standard customer expectation)
+  - Bridge letters: Cover gaps between report periods
+
+  **4.4 Post-Audit**
+  - Review auditor findings and management responses
+  - Address any qualified opinions or exceptions
+  - Plan for annual recurrence (the observation period should be continuous)
+  - Share report with customers under NDA or via trust portal
+
+  ### Deliverables
+  - System description
+  - Complete evidence package
+  - SOC 2 Type II report
+  - Management response to findings
+  - Annual audit calendar
+
+  ---
+
+  ## Staffing Guidance
+
+  | Role | FTE (6-month program) | Notes |
+  |------|---------------------|-------|
+  | Compliance Lead | 0.5-1.0 | Control matrix, evidence management |
+  | Security Engineer | 0.5 | Technical control implementation |
+  | IT Operations | 0.2 | Access management, monitoring |
+  | Engineering Lead | 0.2 | Change management evidence |
+  | HR Representative | 0.1 | Onboarding/offboarding evidence |
+  | External Auditor | Engagement | CPA firm (3-6 weeks on-site/remote) |
+
+  ## Budget Indicators
+
+  | Component | Cost Range |
+  |-----------|-----------|
+  | GRC tool (optional) | USD 10K-50K/year |
+  | Audit (Type II, first year) | USD 30K-80K |
+  | Consulting support (optional) | USD 20K-60K |
+  | Internal staff time | 2-4 FTE-months |
+  | Remediation (tooling, infrastructure) | USD 10K-100K (varies) |

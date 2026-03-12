@@ -1,0 +1,321 @@
+---
+id: commplan-compliance-program
+type: communication_plan
+category: compliance
+title: "Communication Plan -- Compliance Program"
+summary: "Stakeholder communication schedule for a compliance program (ISO 27001, SOC 2, NIS2) covering executive updates, team coordination, audit communications, and organization-wide announcements."
+source: "PMI PMBOK communications management, ISACA governance framework"
+tags: "communication, compliance, stakeholder, reporting, executive"
+metadata:
+  audiences: "Board, Executive Team, Project Team, All Staff, External Auditor, Regulators"
+  cadence: "Weekly to annually depending on audience"
+content: |
+  ## Communication Plan: Compliance Program
+
+  ### Stakeholder Map
+
+  | Stakeholder | Interest | Influence | Communication Need |
+  |-------------|---------|-----------|-------------------|
+  | Board / Management Body | Risk posture, liability | Very High | Quarterly strategic update |
+  | Executive Team (CxO) | Budget, timeline, business impact | High | Monthly progress report |
+  | Program Team | Task assignments, blockers | High | Weekly status meetings |
+  | Department Heads | Impact on their teams, resource needs | Medium | Monthly coordination |
+  | All Staff | Training, policy changes | Low-Medium | Quarterly awareness updates |
+  | External Auditor | Scope, evidence, readiness | Medium | Pre-audit and during audit |
+  | Regulators | Compliance status | Low (until engagement) | Registration, incident reports |
+
+  ### Communication Schedule
+
+  | Audience | Format | Frequency | Owner | Content |
+  |----------|--------|-----------|-------|---------|
+  | Board | Presentation (10 min) | Quarterly | CISO | Risk posture, program status, budget, key decisions needed |
+  | Executive Team | Written report + meeting | Monthly | Program Manager | Milestone progress, RAG status, budget burn, risks, decisions needed |
+  | Program Team | Standup meeting | Weekly | Program Manager | Task status, blockers, coordination needs |
+  | Department Heads | Email update | Monthly | Program Manager | Upcoming activities affecting their teams, resource requests |
+  | All Staff | Email / Intranet post | Quarterly + ad hoc | Comms Lead | New policies, training requirements, program milestones |
+  | All Staff | Training session | At program start + annually | Awareness Lead | Security awareness, policy changes, compliance requirements |
+  | External Auditor | Kickoff meeting + ongoing | Per engagement | Compliance Manager | Scope, evidence, findings, management responses |
+
+  ### Escalation Triggers
+  - **Immediate executive escalation:** Major scope change, budget overrun >15%, compliance deadline at risk, audit finding with material impact
+  - **Board escalation:** Regulatory enforcement action, material compliance gap, certification risk
+  - **All-staff communication:** New policy requiring action, security incident affecting staff, training deadline
+
+  ### Message Templates
+
+  **Monthly Executive Report Structure:**
+  1. Executive summary (3 sentences: status, key achievement, key risk)
+  2. Milestone tracker (completed, in progress, upcoming)
+  3. Risk and issues log
+  4. Budget status (spent vs. planned)
+  5. Decisions needed
+  6. Next month focus
+
+  **Quarterly Board Briefing Structure:**
+  1. Compliance posture summary (one slide)
+  2. Key risks and mitigations
+  3. Program progress vs. plan
+  4. Regulatory landscape changes
+  5. Budget and resource needs
+  6. Recommended actions
+
+---
+id: commplan-incident-response
+type: communication_plan
+category: security-operations
+title: "Communication Plan -- Incident Response"
+summary: "Communication procedures during security incidents covering internal escalation, management notification, customer notification, regulatory reporting, and media response."
+source: "NIST SP 800-61r3, NIS2 Article 23, GDPR Article 33-34"
+tags: "communication, incident-response, notification, regulatory, media, crisis"
+metadata:
+  audiences: "IR Team, Management, Legal, Customers, Regulators, CSIRT, Media"
+  cadence: "Event-driven with defined timelines"
+content: |
+  ## Communication Plan: Incident Response
+
+  ### Communication Channels
+
+  | Channel | Purpose | When to Use |
+  |---------|---------|------------|
+  | Out-of-band chat (Signal/Teams) | IR team coordination | During all incidents (assume corporate systems compromised) |
+  | Phone / conference bridge | Real-time coordination | SEV-1 and SEV-2 incidents |
+  | Email (secure) | Formal notifications, reports | Post-containment updates, regulatory notifications |
+  | Incident ticket system | Case documentation | All incidents (evidence and audit trail) |
+  | War room (physical or virtual) | Sustained response | SEV-1 incidents lasting >4 hours |
+
+  ### Internal Notification Matrix
+
+  | Severity | IR Team | IT Ops | CISO | CEO/MD | Legal | HR | Comms | Board |
+  |----------|---------|--------|------|--------|-------|----|-------|-------|
+  | SEV-1 | Immediate | Immediate | Immediate | Within 1h | Within 1h | If needed | Within 2h | Within 24h |
+  | SEV-2 | Immediate | Immediate | Within 1h | Within 4h | Within 4h | If needed | If needed | Next board meeting |
+  | SEV-3 | Immediate | If needed | Next business day | No | If needed | If needed | No | No |
+  | SEV-4 | Immediate | No | Weekly summary | No | No | No | No | No |
+
+  ### Regulatory Notification Timelines
+
+  | Regulation | Trigger | Initial Notification | Follow-up | Final Report |
+  |------------|---------|---------------------|-----------|-------------|
+  | NIS2 | Major incident | 24 hours (early warning) | 72 hours (incident notification) | 1 month |
+  | GDPR | Personal data breach | 72 hours (to DPA) | As requested | After investigation |
+  | DORA | Major ICT incident | 4 hours (classification) | 72 hours (intermediate) | 1 month |
+  | US State Breach Laws | PII breach | Varies (30-90 days) | As required | As required |
+
+  ### Customer Communication Guidelines
+
+  **When to notify customers:**
+  - Their data was accessed, exfiltrated, or exposed
+  - Service availability impacted beyond published SLA
+  - Their systems may be at risk (e.g., compromised integration)
+  - Contractual or regulatory obligation requires it
+
+  **Customer notification content:**
+  - What happened (factual, no speculation)
+  - What data/services were affected
+  - What actions we have taken
+  - What actions they should take (password reset, monitoring)
+  - Contact information for questions
+  - Commitment to ongoing updates
+
+  **Do NOT include:** Attribution to specific threat actors (unless confirmed), speculation about impact scope, technical details that could aid attackers, legal admissions
+
+  ### Media Response
+  - All media inquiries routed through Communications Lead
+  - No technical staff speak to media without approval
+  - Prepare holding statement within 4 hours of SEV-1
+  - Legal reviews all public statements before release
+  - Designate a single spokesperson
+
+---
+id: commplan-security-program-launch
+type: communication_plan
+category: risk-management
+title: "Communication Plan -- Security Program Launch"
+summary: "Communication strategy for launching a new security program covering executive buy-in, department engagement, staff awareness, and change management messaging."
+source: "ISACA change management, ADKAR model"
+tags: "communication, program-launch, change-management, awareness, buy-in"
+metadata:
+  audiences: "Executive Team, Department Heads, All Staff, IT Team, External Partners"
+  cadence: "Pre-launch through first 6 months"
+content: |
+  ## Communication Plan: Security Program Launch
+
+  ### Pre-Launch Communications (4-6 weeks before)
+
+  | Week | Audience | Action | Purpose |
+  |------|----------|--------|---------|
+  | -6 | Executive Team | Business case presentation | Secure sponsorship and budget |
+  | -5 | Department Heads | 1:1 briefings | Build support, identify concerns |
+  | -4 | IT Team | Technical briefing | Prepare for implementation support |
+  | -3 | All Staff | CEO announcement (email) | Signal importance, set expectations |
+  | -2 | Department Heads | Impact assessment review | Address specific concerns |
+  | -1 | Program Team | Kickoff meeting | Align on plan, roles, first actions |
+
+  ### Launch Week Communications
+
+  | Day | Audience | Action |
+  |-----|----------|--------|
+  | Monday | All Staff | Launch announcement with program overview |
+  | Tuesday | Department Heads | Detailed timeline and resource requests |
+  | Wednesday | IT Team | Technical implementation kickoff |
+  | Thursday | All Staff | FAQ document published on intranet |
+  | Friday | Executive sponsor | Week 1 summary, early feedback |
+
+  ### Ongoing Communications (First 6 Months)
+
+  | Frequency | Audience | Content |
+  |-----------|----------|---------|
+  | Weekly | Program Team | Status, blockers, coordination |
+  | Bi-weekly | Department Heads | Impact updates, upcoming needs |
+  | Monthly | Executive Team | Progress, budget, risks |
+  | Monthly | All Staff | Quick wins, milestones achieved, what's next |
+  | Quarterly | Board | Strategic update |
+
+  ### Key Messages (by Audience)
+
+  **For Executives:** "This program reduces our risk exposure and meets regulatory requirements. Here is the business case and expected ROI."
+
+  **For Department Heads:** "Here is what your team needs to do, when, and what support you will get. We will minimize disruption."
+
+  **For All Staff:** "We are building a stronger security posture. Here is what changes, what stays the same, and how this protects our company and customers."
+
+  **For IT:** "Here are the technical changes, the timeline, and the resources available. Your input on implementation approach is valued."
+
+  ### Resistance Management
+  - Identify likely resistance points early (new processes, time commitments, perceived criticism)
+  - Address concerns directly (not dismissively)
+  - Highlight benefits specific to each audience
+  - Use early adopters and champions in each department
+  - Make compliance easy (provide templates, tools, guidance)
+
+---
+id: commplan-vendor-security
+type: communication_plan
+category: risk-management
+title: "Communication Plan -- Vendor Security Program"
+summary: "Communication strategy for engaging vendors in security assessment and compliance, covering initial notification, assessment process, remediation, and ongoing monitoring."
+source: "ISO 27001:2022 A.5.19-A.5.23, NIST SP 800-161"
+tags: "communication, vendor, third-party, assessment, supply-chain"
+metadata:
+  audiences: "Vendor Management, Key Vendors, Procurement, Internal Stakeholders"
+  cadence: "Per vendor lifecycle stage"
+content: |
+  ## Communication Plan: Vendor Security Program
+
+  ### Vendor Notification Timeline
+
+  | Stage | Timing | Communication | Owner |
+  |-------|--------|--------------|-------|
+  | Program announcement | 90 days before first assessment | Formal letter announcing new security requirements | Vendor Manager |
+  | Assessment notification | 60 days before assessment | Assessment scope, timeline, what to prepare | Security Analyst |
+  | Questionnaire distribution | 45 days before deadline | Questionnaire with instructions and support contact | Security Analyst |
+  | Reminder | 14 days before deadline | Follow-up for non-respondents | Vendor Manager |
+  | Results notification | Within 30 days of assessment | Risk rating, findings, remediation requirements | Security Analyst |
+  | Remediation follow-up | Monthly until resolved | Progress check on open findings | Vendor Manager |
+  | Annual reassessment | 60 days before anniversary | Reassessment notification | Security Analyst |
+
+  ### Vendor Communication Templates
+
+  **Initial Program Announcement:**
+  - Why: Regulatory requirement and customer obligation
+  - What: Annual security assessment for all vendors handling our data or accessing our systems
+  - When: Assessment cycle starts on [date]
+  - Impact: Vendor cooperation required; non-compliance may affect contract renewal
+  - Support: Dedicated contact for questions
+
+  **Assessment Results (passing):**
+  - Thank you for cooperation
+  - Overall risk rating
+  - Any recommendations for improvement
+  - Next assessment date
+
+  **Assessment Results (findings):**
+  - Overall risk rating
+  - Specific findings requiring remediation
+  - Remediation deadlines by severity
+  - Support available from our team
+  - Escalation path if deadlines cannot be met
+
+  ### Internal Stakeholder Communication
+  - Business Owners: Risk summary for their vendors, action required for high-risk vendors
+  - Procurement: Updated security requirements for new contracts
+  - Legal: Vendors requiring contract amendments
+  - Executive: Quarterly vendor risk summary
+
+---
+id: commplan-board-security-reporting
+type: communication_plan
+category: risk-management
+title: "Communication Plan -- Board Security Reporting"
+summary: "Framework for reporting cybersecurity posture to the board of directors, covering content structure, frequency, metrics, and presentation approach."
+source: "NACD Cyber-Risk Oversight Handbook, SEC cybersecurity disclosure rules, NIS2 Article 20"
+tags: "communication, board, reporting, executive, risk-posture, governance"
+metadata:
+  audiences: "Board of Directors, Audit Committee"
+  cadence: "Quarterly (minimum), ad hoc for material events"
+content: |
+  ## Communication Plan: Board Security Reporting
+
+  ### Reporting Cadence
+
+  | Occasion | Format | Duration | Audience |
+  |----------|--------|----------|----------|
+  | Quarterly board meeting | Presentation + written report | 15-20 minutes | Full Board |
+  | Audit committee meeting | Detailed written report | 30 minutes | Audit Committee |
+  | Material incident | Immediate briefing | As needed | Board Chair + Audit Committee Chair |
+  | Annual strategy | Presentation + discussion | 45-60 minutes | Full Board |
+
+  ### Quarterly Report Structure (recommended 5-7 slides)
+
+  **Slide 1: Executive Summary**
+  - Overall risk posture: Improved / Stable / Degraded (with one-sentence explanation)
+  - Top 3 risks (risk register extract)
+  - Key metric: [choose one that tells the story -- e.g., "95% of critical vulnerabilities remediated within SLA"]
+
+  **Slide 2: Threat Landscape**
+  - Relevant threats to our sector in this quarter
+  - Incidents at peer organizations (anonymized lessons)
+  - Changes in regulatory environment
+
+  **Slide 3: Program Progress**
+  - Key initiatives status (3-5 initiatives, RAG status)
+  - Milestones achieved this quarter
+  - Budget status (spent vs. planned)
+
+  **Slide 4: Metrics Dashboard**
+  - 4-6 metrics the board has agreed to track, trended over 4 quarters
+  - Red/amber/green against targets
+  - Brief commentary on significant changes
+
+  **Slide 5: Incidents**
+  - Count by severity, comparison to prior quarter
+  - Notable incidents (anonymized if sensitive) with lessons learned
+  - If no incidents: "No material security incidents this quarter"
+
+  **Slide 6: Compliance Status**
+  - Certification/attestation status (ISO 27001, SOC 2, NIS2)
+  - Upcoming audits or assessments
+  - Open audit findings count and remediation progress
+
+  **Slide 7: Decisions Needed**
+  - Specific decisions requested from the board
+  - Each with: recommendation, rationale, risk of inaction, budget impact
+
+  ### Board-Appropriate Metrics (pick 4-6)
+
+  | Metric | Why Board Cares | Target |
+  |--------|----------------|--------|
+  | Critical vulnerability remediation within SLA | Measures operational effectiveness | >95% |
+  | Mean time to detect (MTTD) | Measures detection capability | <24 hours |
+  | Phishing simulation click rate | Measures human risk | <5% |
+  | Third-party vendor risk score | Measures supply chain exposure | >80% assessed |
+  | Compliance posture score | Regulatory exposure | All certifications current |
+  | Security training completion | Staff readiness | >95% |
+
+  ### Presentation Guidelines
+  - No jargon -- define technical terms or use business language
+  - Focus on risk and business impact, not technical details
+  - Compare to industry benchmarks where possible
+  - Be honest about gaps -- boards lose trust if surprised later
+  - Always include "what are we doing about it" for each risk
+  - Have technical backup slides ready for questions

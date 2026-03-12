@@ -1,0 +1,172 @@
+id: incident-response-program
+type: playbook
+category: security-operations
+title: "Incident Response Program Build Playbook"
+summary: "4-phase, 3-month plan to build an incident response program covering team formation, playbook development, detection engineering, communication procedures, and exercise validation."
+source: "NIST SP 800-61r3, FIRST CSIRT Framework, SANS Incident Handler's Handbook"
+tags: "incident-response, csirt, nist-800-61, detection, containment, recovery, playbooks"
+metadata:
+  duration: "3 months"
+  phases: "4"
+  target_org_size: "Any (50+ employees)"
+  frameworks: "NIST SP 800-61r3, FIRST CSIRT, SANS"
+content: |
+  ## Phase 1: Team Formation and Governance (Weeks 1-3)
+
+  ### Objective
+  Establish the incident response team, define roles, and set governance structure.
+
+  ### Activities
+
+  **1.1 Team Structure**
+  - Define IR team model: dedicated, hybrid (shared with other duties), or virtual (on-call)
+  - Core roles:
+    - IR Manager: owns the process, coordinates response, communicates with leadership
+    - Triage Analyst: initial alert assessment and classification
+    - Forensic Analyst: evidence collection and analysis
+    - Containment Specialist: system isolation and threat removal
+    - Communications Lead: internal/external messaging
+  - Extended team (engaged as needed): Legal, HR, PR/Communications, Business Unit leads
+
+  **1.2 Governance**
+  - Define IR policy: scope, authority, escalation thresholds, legal obligations
+  - Establish IR team authority: who can isolate systems, disable accounts, engage law enforcement
+  - Define incident classification scheme:
+    - SEV-1 (Critical): active data breach, ransomware, critical system compromise
+    - SEV-2 (High): confirmed compromise with limited impact, credential theft
+    - SEV-3 (Medium): malware detection, phishing with credential entry, policy violation
+    - SEV-4 (Low): failed attack attempts, suspicious activity requiring investigation
+  - Establish engagement criteria for legal counsel and law enforcement
+
+  **1.3 Contact Lists and Communication Channels**
+  - Build and maintain on-call roster with primary and backup contacts
+  - Establish out-of-band communication channel (not dependent on corporate email or chat)
+  - Create contact list: internal stakeholders, legal counsel, insurance carrier, forensic retainer, law enforcement, regulators, customers (if breach notification required)
+  - Test communication channels monthly
+
+  ### Deliverables
+  - IR team charter and roster
+  - IR policy
+  - Classification scheme
+  - Contact lists and communication channel setup
+
+  ---
+
+  ## Phase 2: Playbook Development (Weeks 3-6)
+
+  ### Objective
+  Create actionable response playbooks for the most common incident types.
+
+  ### Activities
+
+  **2.1 Priority Playbooks (create these first)**
+  1. Ransomware response
+  2. Business email compromise (BEC)
+  3. Data breach (unauthorized data access or exfiltration)
+  4. Credential compromise (stolen passwords, token theft)
+  5. Malware infection (endpoints)
+
+  **2.2 Playbook Structure**
+  Each playbook follows the NIST lifecycle and includes:
+  - **Detection triggers**: what alerts or observations indicate this incident type
+  - **Triage checklist**: first 30 minutes -- confirm, classify severity, notify IR manager
+  - **Containment actions**: immediate actions to stop spread (network isolation, account disable, block IP/domain)
+  - **Evidence collection**: what to capture before remediation (logs, memory dumps, disk images, network captures)
+  - **Eradication steps**: remove threat actor presence, patch entry point, reset compromised credentials
+  - **Recovery procedures**: restore systems, verify clean state, monitor for recurrence
+  - **Notification requirements**: regulatory deadlines (NIS2: 24h early warning, GDPR: 72h DPA notification), customer notification criteria
+  - **Post-incident review**: what to document, lessons learned meeting agenda
+
+  **2.3 Playbook Quality Criteria**
+  - Written for execution under stress -- clear, step-by-step, no ambiguity
+  - Include decision trees for common branch points
+  - Reference specific tools and commands (not generic advice)
+  - Include evidence preservation checklist
+  - Tested through tabletop exercise
+
+  ### Deliverables
+  - 5 priority playbooks (fully detailed)
+  - Playbook template for additional incident types
+  - Evidence collection procedures
+
+  ---
+
+  ## Phase 3: Detection and Tooling (Weeks 5-9)
+
+  ### Objective
+  Deploy detection capabilities and IR tooling to support the playbooks.
+
+  ### Activities
+
+  **3.1 Detection Engineering**
+  - Deploy or configure SIEM with detection rules for each playbook scenario:
+    - Ransomware: rapid file encryption patterns, shadow copy deletion, known ransomware C2 indicators
+    - BEC: mail rule changes, forwarding rules, unusual login locations for email accounts
+    - Data exfiltration: large data transfers, unusual cloud storage uploads, DNS tunneling
+    - Credential compromise: impossible travel, MFA fatigue, password spray, credential stuffing patterns
+    - Malware: EDR detections, suspicious process execution, persistence mechanism creation
+  - Establish alert triage workflow with severity-based response times
+
+  **3.2 IR Tooling**
+  - Forensic toolkit: disk imaging, memory acquisition, timeline analysis
+  - EDR with remote isolation and live response capability
+  - Network analysis: packet capture, flow data, DNS query logs
+  - Log aggregation: centralized logging with 90+ day retention for security-relevant logs
+  - Ticketing: IR case management (can be existing ticket system with IR-specific workflows)
+  - Evidence locker: secure storage for forensic artifacts with chain-of-custody tracking
+
+  **3.3 Automation**
+  - Automate initial enrichment: IP reputation, domain reputation, hash lookup, user context
+  - Automate containment actions where safe: block known-bad indicators, quarantine infected endpoints
+  - Build alert-to-ticket pipeline for automated case creation
+
+  ### Deliverables
+  - Detection rules for 5 priority scenarios
+  - Alert triage workflow
+  - IR tooling deployed and tested
+  - Automated enrichment operational
+
+  ---
+
+  ## Phase 4: Testing and Validation (Weeks 9-12)
+
+  ### Objective
+  Validate the IR program through exercises and establish the ongoing improvement cycle.
+
+  ### Activities
+
+  **4.1 Tabletop Exercise**
+  - Run a tabletop exercise for the highest-risk scenario (typically ransomware or data breach)
+  - Participants: full IR team + extended team (legal, HR, communications, business leads)
+  - Exercise should test: detection, classification, escalation, containment decisions, communications, regulatory notification, recovery
+  - Duration: 2-4 hours
+  - Document findings and action items
+
+  **4.2 Technical Validation**
+  - Run a purple team exercise: simulate attack techniques from one playbook, validate detection and response
+  - Test evidence collection procedures on a test system
+  - Verify backup restoration for recovery procedures
+  - Test out-of-band communication channels
+  - Verify regulatory notification workflow
+
+  **4.3 Metrics and Reporting**
+  - Define IR metrics:
+    - Mean time to detect (MTTD)
+    - Mean time to respond (MTTR)
+    - Mean time to contain (MTTC)
+    - Incidents by type and severity
+    - Detection source (automated vs. manual vs. external)
+  - Build monthly IR report for management
+
+  **4.4 Continuous Improvement**
+  - Conduct post-incident review after every SEV-1 and SEV-2 incident
+  - Update playbooks based on exercise and real-incident findings
+  - Schedule quarterly tabletop exercises (rotate scenarios)
+  - Annual full-scale simulation exercise
+  - Review and update detection rules monthly
+
+  ### Deliverables
+  - Tabletop exercise report
+  - Technical validation results
+  - IR metrics dashboard
+  - Continuous improvement plan

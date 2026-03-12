@@ -1,0 +1,175 @@
+id: nist-csf-adoption
+type: playbook
+category: risk-management
+title: "NIST Cybersecurity Framework 2.0 Adoption Playbook"
+summary: "4-phase, 8-month adoption plan for NIST CSF 2.0 covering organizational profiling, current state assessment, target state definition, and gap remediation across all six functions."
+source: "NIST Cybersecurity Framework 2.0 (February 2024)"
+tags: "nist-csf, risk-management, framework, maturity, govern, identify, protect, detect, respond, recover"
+metadata:
+  duration: "8 months"
+  phases: "4"
+  target_org_size: "Any (framework is sector- and size-agnostic)"
+  frameworks: "NIST CSF 2.0, NIST SP 800-53, NIST SP 800-30"
+content: |
+  ## Phase 1: Organizational Profile and Scope (Months 1-2)
+
+  ### Objective
+  Create the organizational profile per CSF 2.0 and define the scope of the cybersecurity program.
+
+  ### Activities
+
+  **1.1 Organizational Context**
+  - Identify the organization's mission, stakeholders, and legal/regulatory requirements
+  - Determine applicable sector-specific profiles (NIST provides community profiles for sectors)
+  - Define the organizational scope: which systems, data, business units, and third parties are included
+
+  **1.2 CSF 2.0 Functions Overview**
+  CSF 2.0 has six functions (up from five in CSF 1.1):
+  - **GOVERN (GV)** -- new in 2.0: establishes cybersecurity risk management strategy, expectations, and policy
+  - **IDENTIFY (ID)** -- asset management, risk assessment, supply chain risk management
+  - **PROTECT (PR)** -- access control, awareness training, data security, platform security
+  - **DETECT (DE)** -- continuous monitoring, adverse event analysis
+  - **RESPOND (RS)** -- incident management, analysis, reporting, mitigation
+  - **RECOVER (RC)** -- recovery planning, execution, communication
+
+  **1.3 Current Profile Assessment**
+  - Assess current implementation tier for each function (Tier 1: Partial, Tier 2: Risk Informed, Tier 3: Repeatable, Tier 4: Adaptive)
+  - For each category and subcategory, rate current state
+  - Document evidence supporting each rating
+  - Identify areas with no current capability
+
+  ### Deliverables
+  - Organizational context document
+  - Current profile (scored by function/category/subcategory)
+  - Tier assessment per function
+
+  ---
+
+  ## Phase 2: Target Profile and Gap Analysis (Months 2-3)
+
+  ### Objective
+  Define the target profile based on risk appetite and business requirements, then identify gaps.
+
+  ### Activities
+
+  **2.1 Target Profile Development**
+  - Set target tier for each function based on:
+    - Regulatory requirements
+    - Business risk tolerance
+    - Industry standards and customer expectations
+    - Available resources
+  - Not every function needs Tier 4 -- align target to actual risk
+
+  **2.2 Gap Analysis**
+  - Compare current profile to target profile
+  - For each gap, assess:
+    - Business risk of the gap
+    - Effort to close (quick win, medium project, major initiative)
+    - Dependencies on other gaps
+  - Prioritize using risk-based approach: high-risk gaps with low effort first
+
+  **2.3 Action Plan**
+  - Create prioritized action plan with:
+    - Gap description
+    - Target subcategory reference
+    - Actions required
+    - Owner
+    - Timeline
+    - Budget estimate
+    - Success criteria
+
+  ### Deliverables
+  - Target profile
+  - Gap analysis report
+  - Prioritized action plan
+  - Budget estimate
+
+  ---
+
+  ## Phase 3: Implementation (Months 3-7)
+
+  ### Objective
+  Close priority gaps across all six functions.
+
+  ### Activities
+
+  **3.1 GOVERN Function (GV)**
+  - GV.OC: Establish organizational context for cybersecurity
+  - GV.RM: Define risk management strategy and risk appetite
+  - GV.RR: Define roles, responsibilities, and authorities
+  - GV.PO: Create and enforce cybersecurity policy
+  - GV.OV: Establish oversight mechanisms
+  - GV.SC: Define cybersecurity supply chain risk management strategy
+
+  **3.2 IDENTIFY Function (ID)**
+  - ID.AM: Complete asset inventory (hardware, software, data, services)
+  - ID.RA: Conduct risk assessment using chosen methodology
+  - ID.IM: Establish improvement process based on assessments
+
+  **3.3 PROTECT Function (PR)**
+  - PR.AA: Implement identity management and access control
+  - PR.AT: Deliver security awareness training
+  - PR.DS: Apply data security measures (classification, encryption, DLP)
+  - PR.PS: Implement platform security (hardening, patching, configuration management)
+  - PR.IR: Apply technology infrastructure resilience measures
+
+  **3.4 DETECT Function (DE)**
+  - DE.CM: Implement continuous monitoring for assets, networks, and users
+  - DE.AE: Analyze events to identify adverse events and potential incidents
+
+  **3.5 RESPOND Function (RS)**
+  - RS.MA: Establish incident management process
+  - RS.AN: Build incident analysis capability
+  - RS.CO: Define incident reporting and communication procedures
+  - RS.MI: Implement incident mitigation procedures
+
+  **3.6 RECOVER Function (RC)**
+  - RC.RP: Develop and test recovery plans
+  - RC.CO: Establish recovery communication procedures
+
+  ### Deliverables
+  - Implemented controls per function
+  - Updated policies and procedures
+  - Training records
+  - Monitoring capability operational
+  - Recovery plans tested
+
+  ---
+
+  ## Phase 4: Measurement and Continuous Improvement (Months 7-8)
+
+  ### Objective
+  Verify progress, measure maturity improvement, and establish the ongoing improvement cycle.
+
+  ### Activities
+
+  **4.1 Progress Assessment**
+  - Re-assess current profile against the target profile
+  - Measure tier advancement for each function
+  - Document remaining gaps and plans for next cycle
+
+  **4.2 Metrics Development**
+  - Define metrics for each function:
+    - GOVERN: policy compliance rate, management review frequency
+    - IDENTIFY: asset inventory completeness, risk assessment coverage
+    - PROTECT: patching cadence, access review completion, training completion
+    - DETECT: mean time to detect (MTTD), false positive rate
+    - RESPOND: mean time to respond (MTTR), incident containment rate
+    - RECOVER: recovery test success rate, RTO/RPO achievement
+
+  **4.3 Reporting**
+  - Create executive dashboard with function-level maturity scores
+  - Report to management on risk posture changes
+  - Document lessons learned and improvement recommendations
+
+  **4.4 Continuous Improvement Cycle**
+  - Schedule annual profile reassessment
+  - Update target profile as business requirements change
+  - Integrate CSF assessments with other frameworks (ISO 27001, SOC 2, NIS2)
+  - NIST provides a crosswalk to map CSF subcategories to other frameworks
+
+  ### Deliverables
+  - Updated current profile
+  - Metrics dashboard
+  - Executive report
+  - Annual improvement plan

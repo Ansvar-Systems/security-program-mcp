@@ -1,0 +1,250 @@
+id: iso27001-implementation
+type: playbook
+category: compliance
+title: "ISO 27001:2022 Implementation Playbook"
+summary: "5-phase, 9-month implementation plan for ISO 27001:2022 certification covering ISMS scoping, risk assessment, Annex A control selection, internal audit, and certification audit preparation."
+source: "ISO 27001:2022, ISO 27002:2022, ISO 27003 implementation guidance"
+tags: "iso27001, isms, certification, risk-assessment, annex-a, audit"
+metadata:
+  duration: "9 months"
+  phases: "5"
+  target_org_size: "Any (50-5000+ employees)"
+  frameworks: "ISO 27001:2022, ISO 27002:2022, ISO 27005"
+content: |
+  ## Phase 1: ISMS Planning and Scoping (Months 1-2)
+
+  ### Objective
+  Define the ISMS scope, secure management commitment, and establish the project framework.
+
+  ### Activities
+
+  **1.1 Management Commitment (Clause 5)**
+  - Present business case to top management: regulatory drivers, customer requirements, competitive advantage, risk reduction
+  - Obtain written commitment and resource allocation
+  - Appoint ISMS Manager / Information Security Officer
+  - Define the information security policy (Clause 5.2)
+
+  **1.2 ISMS Scope Definition (Clause 4.3)**
+  - Identify organizational context: internal/external issues affecting information security (Clause 4.1)
+  - Identify interested parties and their requirements (Clause 4.2)
+  - Define ISMS boundaries: locations, business units, processes, technology, people
+  - Document scope statement and scope exclusion justifications
+  - Common pitfall: scope too broad leads to lengthy implementation; scope too narrow leads to limited certificate value
+
+  **1.3 Project Setup**
+  - Assign project team: ISMS Manager, risk assessor, internal auditor, process owners
+  - Define project plan with milestones
+  - Select documentation platform (wiki, GRC tool, or document management system)
+  - Define document control procedures (Clause 7.5)
+
+  ### Deliverables
+  - Management commitment letter
+  - Information security policy
+  - ISMS scope statement
+  - Project plan and resource allocation
+  - Document control procedure
+
+  ### Decision Gate
+  Scope statement approved by top management before proceeding.
+
+  ---
+
+  ## Phase 2: Risk Assessment and Treatment (Months 2-4)
+
+  ### Objective
+  Conduct a risk assessment per Clause 6.1.2 and select controls from Annex A.
+
+  ### Activities
+
+  **2.1 Asset Inventory**
+  - Identify information assets within ISMS scope
+  - Classify assets by type: data, software, hardware, services, people, facilities
+  - Assign asset owners
+  - Record in asset register
+
+  **2.2 Risk Assessment (Clause 6.1.2)**
+  - Define risk assessment methodology (asset-based, scenario-based, or threat-based)
+  - Define risk criteria: impact scale (1-5), likelihood scale (1-5), risk acceptance threshold
+  - Identify threats and vulnerabilities for each asset or process
+  - Calculate risk levels (impact x likelihood)
+  - Prioritize risks above acceptance threshold
+
+  **2.3 Risk Treatment (Clause 6.1.3)**
+  - For each unacceptable risk, select treatment option: mitigate, transfer, avoid, accept
+  - Map mitigations to Annex A controls (93 controls across 4 themes)
+  - ISO 27001:2022 Annex A themes:
+    - Organizational controls (37 controls, A.5)
+    - People controls (8 controls, A.6)
+    - Physical controls (14 controls, A.7)
+    - Technological controls (34 controls, A.8)
+  - Document Statement of Applicability (SoA): list all 93 Annex A controls, state applicable/not applicable with justification
+  - Create risk treatment plan with owners, deadlines, and budgets
+
+  **2.4 Risk Acceptance**
+  - Present residual risks to risk owners for formal acceptance
+  - Document risk acceptance decisions
+
+  ### Deliverables
+  - Asset register
+  - Risk assessment report
+  - Statement of Applicability
+  - Risk treatment plan
+  - Risk acceptance records
+
+  ---
+
+  ## Phase 3: Control Implementation (Months 3-7)
+
+  ### Objective
+  Implement selected Annex A controls and develop required ISMS procedures.
+
+  ### Activities
+
+  **3.1 Mandatory ISMS Procedures**
+  - Document control (Clause 7.5)
+  - Risk assessment procedure (Clause 6.1.2)
+  - Risk treatment procedure (Clause 6.1.3)
+  - Internal audit procedure (Clause 9.2)
+  - Management review procedure (Clause 9.3)
+  - Corrective action procedure (Clause 10.1)
+  - Information security objectives and planning (Clause 6.2)
+
+  **3.2 Annex A Control Implementation (by theme)**
+
+  Organizational controls (A.5) -- typical priorities:
+  - A.5.1 Policies for information security
+  - A.5.2 Information security roles and responsibilities
+  - A.5.10 Acceptable use of information and assets
+  - A.5.14 Information transfer
+  - A.5.23 Information security for cloud services
+  - A.5.29 Information security during disruption
+  - A.5.31 Legal, statutory, regulatory, and contractual requirements
+
+  People controls (A.6):
+  - A.6.1 Screening
+  - A.6.2 Terms and conditions of employment
+  - A.6.3 Information security awareness, education, and training
+  - A.6.5 Responsibilities after termination or change of employment
+
+  Physical controls (A.7) -- if in scope:
+  - A.7.1 Physical security perimeters
+  - A.7.4 Physical security monitoring
+  - A.7.9 Security of assets off-premises
+
+  Technological controls (A.8) -- typical priorities:
+  - A.8.1 User endpoint devices
+  - A.8.5 Secure authentication
+  - A.8.7 Protection against malware
+  - A.8.8 Management of technical vulnerabilities
+  - A.8.9 Configuration management
+  - A.8.15 Logging
+  - A.8.16 Monitoring activities
+  - A.8.24 Use of cryptography
+  - A.8.25 Secure development lifecycle
+
+  **3.3 Awareness and Training (Clause 7.3)**
+  - Develop awareness program covering ISMS policy, individual responsibilities, consequences of non-compliance
+  - Deliver training to all in-scope personnel
+  - Document competence requirements for security-relevant roles (Clause 7.2)
+
+  ### Deliverables
+  - Mandatory ISMS procedures (7 minimum)
+  - Implemented Annex A controls with evidence
+  - Training and awareness records
+  - Updated SoA with implementation status
+
+  ---
+
+  ## Phase 4: Internal Audit and Management Review (Months 7-8)
+
+  ### Objective
+  Verify ISMS effectiveness through internal audit and management review before certification audit.
+
+  ### Activities
+
+  **4.1 Internal Audit (Clause 9.2)**
+  - Plan audit scope: all ISMS clauses (4-10) and applicable Annex A controls
+  - Select auditor(s) -- must be independent of areas being audited
+  - Conduct audit: document review, interviews, observation, sampling
+  - Report findings: major non-conformity, minor non-conformity, observation, opportunity for improvement
+  - Common finding areas: incomplete risk assessments, missing evidence of monitoring, inadequate management review
+
+  **4.2 Corrective Actions (Clause 10.1)**
+  - Analyze root causes of non-conformities
+  - Define corrective actions with owners and deadlines
+  - Implement corrections
+  - Verify effectiveness of corrective actions
+
+  **4.3 Management Review (Clause 9.3)**
+  - Prepare management review input: audit results, risk assessment changes, security objectives status, incidents, metrics, stakeholder feedback, improvement opportunities
+  - Conduct management review meeting with top management
+  - Document management review output: decisions, resource changes, improvement actions
+  - Required frequency: at least annually (quarterly recommended during implementation)
+
+  ### Deliverables
+  - Internal audit report
+  - Corrective action records
+  - Management review minutes
+  - Updated risk register
+
+  ---
+
+  ## Phase 5: Certification Audit (Months 8-9)
+
+  ### Objective
+  Pass the two-stage certification audit by an accredited certification body.
+
+  ### Activities
+
+  **5.1 Certification Body Selection**
+  - Select an accredited certification body (check national accreditation body listings)
+  - Factors: sector experience, auditor availability, cost, timeline, recognition
+  - Agree on audit scope and schedule
+
+  **5.2 Stage 1 Audit (Documentation Review)**
+  - Auditor reviews ISMS documentation: scope, policy, risk assessment, SoA, procedures
+  - Auditor assesses readiness for Stage 2
+  - Address any Stage 1 findings before Stage 2
+
+  **5.3 Stage 2 Audit (Implementation Assessment)**
+  - On-site (or remote) audit of ISMS implementation effectiveness
+  - Auditor interviews staff, reviews evidence, tests controls
+  - Duration: typically 3-10 days depending on scope and organization size
+  - Possible outcomes: certification recommended, minor non-conformities (90-day fix), major non-conformities (re-audit required)
+
+  **5.4 Post-Certification**
+  - Address any audit non-conformities within deadline
+  - Receive certificate (valid 3 years)
+  - Plan surveillance audits (annually)
+  - Plan recertification audit (year 3)
+
+  ### Deliverables
+  - Stage 1 audit readiness package
+  - Stage 2 evidence preparation
+  - Certificate
+  - Surveillance audit schedule
+
+  ---
+
+  ## Staffing Guidance
+
+  | Role | FTE (9-month program) | Notes |
+  |------|---------------------|-------|
+  | ISMS Manager | 0.5-1.0 | Project lead, documentation owner |
+  | CISO / Security Lead | 0.3 | Policy approval, management liaison |
+  | Risk Assessor | 0.3 | Risk assessment and treatment |
+  | Internal Auditor | 0.2 | Must be independent; can be external |
+  | IT Security Engineer | 0.5-1.0 | Technical control implementation |
+  | Process Owners | 0.1 each | Asset owners, risk owners |
+  | External Consultant | As needed | Gap assessment, audit preparation |
+
+  ## Budget Indicators
+
+  | Organization Size | Estimated Budget Range | Certification Audit Cost |
+  |-------------------|----------------------|------------------------|
+  | 50-100 employees | EUR 80K-200K | EUR 8K-15K |
+  | 100-500 employees | EUR 150K-400K | EUR 15K-30K |
+  | 500-2000 employees | EUR 300K-800K | EUR 25K-50K |
+  | 2000+ employees | EUR 500K-1.5M+ | EUR 40K-80K+ |
+
+  Audit costs are for Stage 1 + Stage 2 combined. Surveillance audits are typically 30-50% of initial certification cost.

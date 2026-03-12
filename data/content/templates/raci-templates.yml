@@ -1,0 +1,312 @@
+---
+id: raci-incident-response
+type: raci_template
+category: security-operations
+title: "RACI Matrix -- Incident Response Setup"
+summary: "Responsibility assignment matrix for establishing an incident response capability, covering detection, triage, containment, forensics, communication, and recovery activities."
+source: "NIST SP 800-61r3, SANS Incident Handler's Handbook"
+tags: "raci, incident-response, roles, responsibilities, csirt"
+metadata:
+  roles: "CISO, IR Manager, SOC Analyst, Forensic Analyst, IT Operations, Legal, HR, Communications, Business Unit Lead"
+  deliverables: "IR policy, playbooks, communication plan, exercise schedule"
+content: |
+  ## RACI Matrix: Incident Response Program
+
+  **R** = Responsible (does the work) | **A** = Accountable (approves/owns) | **C** = Consulted | **I** = Informed
+
+  | Activity | CISO | IR Manager | SOC Analyst | Forensic Analyst | IT Ops | Legal | HR | Comms | BU Lead |
+  |----------|------|-----------|-------------|-----------------|--------|-------|------|-------|---------|
+  | IR policy approval | A | R | I | I | I | C | C | I | I |
+  | Team formation | A | R | I | I | C | I | C | I | I |
+  | Playbook development | C | A | R | R | C | C | I | I | I |
+  | Detection rule deployment | I | A | R | C | R | I | I | I | I |
+  | Alert triage | I | A | R | C | I | I | I | I | I |
+  | Incident classification | I | A | R | C | I | I | I | I | I |
+  | Containment execution | A | R | C | C | R | I | I | I | I |
+  | Evidence collection | I | A | C | R | C | C | I | I | I |
+  | Forensic analysis | I | A | I | R | C | C | I | I | I |
+  | Eradication | I | A | C | C | R | I | I | I | I |
+  | Recovery | I | A | I | I | R | I | I | I | C |
+  | Internal communication | A | R | I | I | I | C | C | R | I |
+  | External communication | A | C | I | I | I | R | I | R | I |
+  | Regulatory notification | A | C | I | I | I | R | I | I | I |
+  | Customer notification | A | C | I | I | I | R | I | R | C |
+  | Post-incident review | A | R | R | R | C | C | C | I | C |
+  | Tabletop exercises | A | R | R | R | R | C | C | C | C |
+  | Metrics reporting | A | R | C | I | I | I | I | I | I |
+  | HR actions (insider threat) | C | C | I | C | I | R | A | I | C |
+
+  ### Notes
+  - IR Manager has day-to-day accountability for response operations; CISO retains ultimate accountability for the program
+  - Legal must be consulted before any external communication about incidents
+  - HR leads when incidents involve employee misconduct
+  - Business Unit Leads are consulted for impact assessment and recovery prioritization
+  - Forensic Analyst role can be filled by external retainer if not staffed internally
+
+---
+id: raci-access-control
+type: raci_template
+category: security-operations
+title: "RACI Matrix -- Access Control Rollout"
+summary: "Responsibility assignment matrix for implementing identity and access management controls including provisioning, MFA deployment, privileged access management, and access reviews."
+source: "ISO 27001:2022 A.5.15-A.5.18, A.8.2-A.8.5"
+tags: "raci, access-control, iam, mfa, pam, provisioning, access-review"
+metadata:
+  roles: "CISO, IAM Lead, IT Operations, HR, Application Owners, Security Engineer, Auditor"
+  deliverables: "Access control policy, MFA deployment, PAM solution, access review schedule"
+content: |
+  ## RACI Matrix: Access Control Rollout
+
+  | Activity | CISO | IAM Lead | IT Ops | HR | App Owner | Sec Engineer | Auditor |
+  |----------|------|---------|--------|------|-----------|-------------|---------|
+  | Access control policy | A | R | C | C | C | C | I |
+  | Identity provider setup | I | A | R | I | I | R | I |
+  | User provisioning workflow | I | A | R | R | C | C | I |
+  | Deprovisioning workflow | I | A | R | R | C | C | I |
+  | MFA deployment plan | A | R | C | I | C | R | I |
+  | MFA enrollment (users) | I | A | R | C | I | I | I |
+  | SSO integration | I | A | C | I | R | R | I |
+  | PAM solution deployment | A | R | C | I | I | R | I |
+  | Service account inventory | I | A | C | I | R | R | I |
+  | Role-based access design | I | A | C | C | R | C | I |
+  | Quarterly access reviews | A | R | C | C | R | I | C |
+  | Access review remediation | I | A | R | C | R | I | I |
+  | Orphaned account cleanup | I | A | R | R | C | I | I |
+  | Privileged access monitoring | I | A | I | I | I | R | C |
+  | Access control audit | I | C | C | I | C | I | R |
+  | Emergency access procedure | A | R | R | I | C | C | I |
+
+  ### Notes
+  - HR triggers provisioning (hire) and deprovisioning (termination) -- must be tightly integrated with IAM
+  - Application Owners define role-based access for their applications
+  - Quarterly access reviews: IAM Lead coordinates, Application Owners execute review, Auditor verifies
+  - PAM deployment requires Security Engineer for technical setup and IAM Lead for policy configuration
+
+---
+id: raci-vendor-assessment
+type: raci_template
+category: risk-management
+title: "RACI Matrix -- Vendor Security Assessment"
+summary: "Responsibility assignment matrix for third-party vendor security assessment covering vendor selection, security questionnaires, contract requirements, ongoing monitoring, and exit planning."
+source: "ISO 27001:2022 A.5.19-A.5.23, NIS2 Article 21(2)(d), DORA Article 28"
+tags: "raci, vendor-management, third-party, supply-chain, assessment, tprm"
+metadata:
+  roles: "CISO, Vendor Manager, Procurement, Legal, Security Analyst, Business Owner, DPO"
+  deliverables: "Vendor register, assessment reports, contract security clauses, monitoring schedule"
+content: |
+  ## RACI Matrix: Vendor Security Assessment
+
+  | Activity | CISO | Vendor Mgr | Procurement | Legal | Sec Analyst | Biz Owner | DPO |
+  |----------|------|-----------|------------|-------|------------|-----------|-----|
+  | Vendor criticality classification | A | R | C | I | C | R | C |
+  | Security questionnaire design | A | C | I | C | R | I | C |
+  | Vendor security assessment | I | A | I | I | R | C | C |
+  | SOC 2 / ISO 27001 report review | I | A | I | I | R | I | I |
+  | Risk rating assignment | A | R | I | I | R | C | I |
+  | Contract security clauses | C | C | C | A | R | C | C |
+  | Data processing agreement | I | C | C | A | C | C | R |
+  | Vendor approval decision | A | R | C | C | C | R | C |
+  | Annual vendor reassessment | I | A | I | I | R | C | C |
+  | Vendor incident notification | A | R | I | R | R | I | C |
+  | Vendor offboarding | I | A | R | R | R | R | C |
+  | Exit plan maintenance | I | A | C | C | C | R | I |
+  | Sub-processor tracking | I | R | I | C | C | I | A |
+  | Concentration risk review | A | R | I | I | R | C | I |
+  | Vendor register maintenance | I | A | C | I | C | C | I |
+
+  ### Notes
+  - Business Owner requests and justifies vendor engagement -- shares accountability for vendor risk
+  - DPO involved when vendor processes personal data (GDPR requirements)
+  - Legal owns contractual terms; Security Analyst provides security clause content
+  - Critical vendors require annual reassessment and SOC 2 / ISO 27001 evidence
+  - DORA entities: additional requirements for ICT third-party register and concentration risk
+
+---
+id: raci-security-awareness
+type: raci_template
+category: security-operations
+title: "RACI Matrix -- Security Awareness Training Program"
+summary: "Responsibility assignment matrix for building and operating a security awareness program covering content development, delivery, phishing simulations, metrics tracking, and program improvement."
+source: "NIST SP 800-50, ISO 27001:2022 A.6.3, NIS2 Article 21(2)(g)"
+tags: "raci, security-awareness, training, phishing-simulation, culture"
+metadata:
+  roles: "CISO, Awareness Lead, HR, IT Operations, Department Managers, Legal, Communications"
+  deliverables: "Training content, phishing simulation results, completion reports, program metrics"
+content: |
+  ## RACI Matrix: Security Awareness Training
+
+  | Activity | CISO | Awareness Lead | HR | IT Ops | Dept Managers | Legal | Comms |
+  |----------|------|---------------|------|--------|-------------|-------|-------|
+  | Program strategy and budget | A | R | C | I | I | I | I |
+  | Training content development | C | R | C | C | I | C | C |
+  | Regulatory training requirements | C | R | C | I | I | A | I |
+  | Training platform setup | I | A | C | R | I | I | I |
+  | Training assignment and scheduling | I | A | R | I | R | I | I |
+  | Training delivery (live sessions) | I | R | C | I | C | I | I |
+  | Completion tracking | I | R | R | I | C | I | I |
+  | Non-completion escalation | I | C | R | I | A | I | I |
+  | Phishing simulation design | C | R | I | C | I | C | I |
+  | Phishing simulation execution | I | R | I | C | I | I | I |
+  | Phishing results analysis | I | R | I | I | I | I | I |
+  | Repeat clicker remediation | I | R | C | I | R | I | I |
+  | New hire onboarding training | I | R | A | I | I | I | I |
+  | Specialized role-based training | C | R | C | C | C | I | I |
+  | Program metrics and reporting | A | R | C | I | I | I | I |
+  | Annual program review | A | R | C | I | C | C | I |
+  | Internal communications | I | R | C | I | I | I | A |
+
+  ### Notes
+  - Department Managers are accountable for their team's completion -- escalation goes through management chain
+  - HR owns the new hire training assignment as part of onboarding
+  - Legal reviews content for regulatory accuracy (NIS2, DORA, GDPR training requirements)
+  - Communications helps with messaging to make awareness engaging rather than punitive
+
+---
+id: raci-patch-management
+type: raci_template
+category: security-operations
+title: "RACI Matrix -- Patch Management"
+summary: "Responsibility assignment matrix for patch management covering vulnerability scanning, patch testing, deployment scheduling, emergency patching, exception handling, and compliance reporting."
+source: "NIST SP 800-40r4, CIS Control 7"
+tags: "raci, patch-management, vulnerability, remediation, change-management"
+metadata:
+  roles: "CISO, Vuln Manager, IT Operations, System Owners, Change Manager, Security Analyst"
+  deliverables: "Patch schedule, testing results, deployment records, exception log, compliance report"
+content: |
+  ## RACI Matrix: Patch Management
+
+  | Activity | CISO | Vuln Mgr | IT Ops | System Owner | Change Mgr | Sec Analyst |
+  |----------|------|---------|--------|-------------|-----------|------------|
+  | Patch management policy | A | R | C | C | C | C |
+  | Vulnerability scanning | I | A | R | I | I | C |
+  | Scan result triage | I | A | C | I | I | R |
+  | Patch prioritization | A | R | C | C | I | R |
+  | Patch testing | I | I | R | C | I | I |
+  | Deployment scheduling | I | C | R | C | A | I |
+  | Standard patch deployment | I | I | R | I | A | I |
+  | Emergency patch deployment | A | R | R | C | R | R |
+  | Post-patch validation | I | C | R | R | I | I |
+  | Exception requests | C | A | C | R | C | R |
+  | Exception approval | A | R | I | I | I | C |
+  | Compliance reporting | A | R | C | I | I | C |
+  | SLA monitoring | I | R | C | I | I | I |
+  | Failed patch remediation | I | A | R | C | C | C |
+
+  ### Notes
+  - Change Manager controls the deployment schedule via change management process
+  - Emergency patches bypass normal change windows but require post-hoc change record
+  - System Owners must validate application functionality after patching
+  - CISO approves exceptions for patches that cannot meet SLA
+
+---
+id: raci-soc-operations
+type: raci_template
+category: security-operations
+title: "RACI Matrix -- SOC Operations Setup"
+summary: "Responsibility assignment matrix for establishing Security Operations Center operations covering SIEM deployment, alert triage, detection engineering, threat hunting, and shift management."
+source: "MITRE ATT&CK, NIST SP 800-61, SANS SOC model"
+tags: "raci, soc, siem, detection, threat-hunting, monitoring, triage"
+metadata:
+  roles: "CISO, SOC Manager, L1 Analyst, L2 Analyst, L3/Threat Hunter, Detection Engineer, IT Operations"
+  deliverables: "SIEM configuration, detection rules, triage procedures, shift schedule, metrics dashboard"
+content: |
+  ## RACI Matrix: SOC Operations
+
+  | Activity | CISO | SOC Mgr | L1 Analyst | L2 Analyst | L3/Hunter | Det Engineer | IT Ops |
+  |----------|------|---------|-----------|-----------|----------|-------------|--------|
+  | SOC charter and scope | A | R | I | I | I | I | I |
+  | SIEM deployment | I | A | I | C | C | R | R |
+  | Log source onboarding | I | A | I | C | C | R | R |
+  | Detection rule development | I | A | I | C | R | R | I |
+  | Detection rule tuning | I | A | C | R | C | R | I |
+  | Alert triage (initial) | I | A | R | I | I | I | I |
+  | Alert investigation | I | A | I | R | C | I | I |
+  | Incident escalation | I | A | R | R | I | I | I |
+  | Threat hunting campaigns | I | A | I | C | R | C | I |
+  | Threat intel integration | I | A | I | C | R | R | I |
+  | Shift scheduling | I | R | I | I | I | I | I |
+  | Runbook maintenance | I | A | C | R | C | C | I |
+  | False positive management | I | A | R | R | C | R | I |
+  | Metrics and reporting | A | R | C | C | C | C | I |
+  | SOC tool maintenance | I | A | I | I | I | R | R |
+  | Purple team exercises | I | A | I | R | R | R | C |
+
+  ### Notes
+  - L1 handles initial triage and known-pattern responses
+  - L2 handles investigation of escalated alerts and complex analysis
+  - L3/Threat Hunter conducts proactive hunting and handles advanced incidents
+  - Detection Engineer owns the technical detection content (rules, parsers, enrichment)
+  - SOC Manager owns staffing, scheduling, and operational metrics
+
+---
+id: raci-data-classification
+type: raci_template
+category: risk-management
+title: "RACI Matrix -- Data Classification Program"
+summary: "Responsibility assignment matrix for implementing a data classification program covering policy creation, classification scheme, labeling, handling rules, DLP deployment, and compliance verification."
+source: "ISO 27001:2022 A.5.12-A.5.14, NIST SP 800-60"
+tags: "raci, data-classification, labeling, dlp, data-handling, information-protection"
+metadata:
+  roles: "CISO, Data Protection Lead, DPO, Data Owners, IT Operations, Security Engineer, Auditor"
+  deliverables: "Classification policy, labeling scheme, handling procedures, DLP rules, training materials"
+content: |
+  ## RACI Matrix: Data Classification Program
+
+  | Activity | CISO | DP Lead | DPO | Data Owner | IT Ops | Sec Engineer | Auditor |
+  |----------|------|--------|------|-----------|--------|-------------|---------|
+  | Classification policy | A | R | C | C | I | I | I |
+  | Classification scheme design | A | R | C | C | C | C | I |
+  | Data inventory | I | A | C | R | C | I | I |
+  | Classification assignment | I | C | C | A | I | I | I |
+  | Labeling tool deployment | I | A | I | I | R | R | I |
+  | Handling procedures | A | R | C | C | C | C | I |
+  | DLP policy design | C | A | C | C | I | R | I |
+  | DLP deployment | I | A | I | I | R | R | I |
+  | DLP alert review | I | A | I | C | I | R | I |
+  | User training | I | R | C | C | I | I | I |
+  | Classification review | I | A | C | R | I | I | C |
+  | Compliance audit | I | C | C | C | I | I | A |
+  | Exception handling | A | R | C | R | I | I | I |
+
+  ### Notes
+  - Data Owners (typically business unit leads) are accountable for classifying their data
+  - DPO consulted for personal data classification to ensure GDPR alignment
+  - Security Engineer handles technical deployment of labeling and DLP tools
+  - Annual classification review ensures labels remain accurate as data usage changes
+
+---
+id: raci-business-continuity
+type: raci_template
+category: risk-management
+title: "RACI Matrix -- Business Continuity Planning"
+summary: "Responsibility assignment matrix for business continuity planning covering BIA, recovery strategy, plan development, testing, and maintenance."
+source: "ISO 22301:2019, NIST SP 800-34r1"
+tags: "raci, business-continuity, bcp, disaster-recovery, bcp-testing, bia"
+metadata:
+  roles: "CEO/MD, CISO, BC Manager, IT Operations, Business Unit Leads, Facilities, HR, Communications"
+  deliverables: "BIA report, recovery strategies, BC plan, test results, maintenance schedule"
+content: |
+  ## RACI Matrix: Business Continuity Planning
+
+  | Activity | CEO/MD | CISO | BC Mgr | IT Ops | BU Leads | Facilities | HR | Comms |
+  |----------|--------|------|--------|--------|---------|-----------|------|-------|
+  | BC policy approval | A | C | R | I | I | I | I | I |
+  | Business impact analysis | C | C | A | C | R | C | C | I |
+  | RTO/RPO definition | A | C | R | C | R | I | I | I |
+  | Recovery strategy selection | A | C | R | R | C | C | I | I |
+  | BC plan development | I | C | A | R | R | R | R | R |
+  | IT disaster recovery plan | I | A | C | R | C | C | I | I |
+  | Crisis management plan | A | C | R | C | C | C | C | R |
+  | Crisis communication plan | A | I | C | I | I | I | I | R |
+  | Annual BC test | A | C | R | R | R | R | C | C |
+  | Test results review | A | C | R | C | C | I | I | I |
+  | Plan maintenance (annual) | I | C | A | R | R | R | C | C |
+  | Alternate site management | I | I | A | R | I | R | I | I |
+  | Staff relocation planning | I | I | C | I | C | C | A | I |
+
+  ### Notes
+  - CEO/MD ultimately accountable for business continuity -- it is a business decision, not an IT decision
+  - Business Unit Leads define critical processes and acceptable downtime for their units
+  - BC Manager coordinates and maintains plans; does not own business process recovery
+  - IT Operations owns the technical disaster recovery component
+  - Annual testing is a minimum; critical organizations should test semi-annually

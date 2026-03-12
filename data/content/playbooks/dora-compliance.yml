@@ -1,0 +1,265 @@
+id: dora-compliance
+type: playbook
+category: compliance
+title: "DORA Compliance Program Playbook"
+summary: "5-phase, 12-month implementation plan for DORA (Digital Operational Resilience Act) covering ICT risk management, incident reporting, resilience testing, third-party oversight, and information sharing."
+source: "Regulation (EU) 2022/2554, ESA Regulatory Technical Standards"
+tags: "dora, financial-services, ict-risk, resilience-testing, third-party, eu"
+metadata:
+  duration: "12 months"
+  phases: "5"
+  target_org_size: "Financial entities (banks, insurers, investment firms, crypto-asset providers)"
+  frameworks: "DORA, EBA/EIOPA/ESMA RTS/ITS"
+content: |
+  ## Phase 1: Impact Assessment and Gap Analysis (Months 1-3)
+
+  ### Objective
+  Determine DORA applicability, assess current state against the five pillars, and define the remediation roadmap.
+
+  ### Activities
+
+  **1.1 Entity Classification**
+  - Confirm the organization is a financial entity under DORA Article 2 (credit institutions, investment firms, insurance undertakings, payment institutions, crypto-asset service providers, etc.)
+  - Determine proportionality: DORA applies requirements proportionally based on size, risk profile, nature, scale, and complexity of services
+  - Identify applicable Regulatory Technical Standards (RTS) and Implementing Technical Standards (ITS) from the ESAs
+
+  **1.2 Five-Pillar Gap Analysis**
+
+  Pillar 1 -- ICT Risk Management (Articles 5-16):
+  - ICT risk management framework (governance, strategy, policies)
+  - Identification of all ICT assets and dependencies
+  - Protection and prevention measures
+  - Detection capabilities
+  - Response and recovery procedures
+  - Backup and restoration policies
+  - Learning and evolving from incidents
+  - Communication policies
+
+  Pillar 2 -- ICT-Related Incident Reporting (Articles 17-23):
+  - Incident classification methodology (per RTS criteria)
+  - Notification process to competent authority
+  - Major incident reporting timelines
+  - Voluntary significant cyber threat reporting
+  - Internal escalation procedures
+
+  Pillar 3 -- Digital Operational Resilience Testing (Articles 24-27):
+  - Basic testing program (vulnerability assessments, network security, gap analysis, source code review, scenario-based tests, compatibility, performance, penetration testing)
+  - Threat-led penetration testing (TLPT) for entities identified by competent authorities
+  - TIBER-EU framework alignment for TLPT
+
+  Pillar 4 -- ICT Third-Party Risk Management (Articles 28-44):
+  - Register of ICT third-party service providers
+  - Key contractual provisions for ICT services
+  - Concentration risk assessment
+  - Sub-outsourcing chain visibility
+  - Exit strategies for critical ICT services
+
+  Pillar 5 -- Information Sharing (Article 45):
+  - Voluntary participation in threat intelligence sharing arrangements
+  - Anonymization and data protection safeguards
+
+  **1.3 Proportionality Assessment**
+  - Small and non-interconnected entities have a simplified ICT risk management framework (Article 16)
+  - Not all entities are subject to TLPT (competent authority designates)
+  - Microenterprises have additional exemptions
+
+  ### Deliverables
+  - Entity classification and proportionality assessment
+  - Five-pillar gap analysis report
+  - RTS/ITS applicability matrix
+  - Remediation roadmap with priorities
+
+  ---
+
+  ## Phase 2: ICT Risk Management Framework (Months 3-6)
+
+  ### Objective
+  Establish the ICT risk management framework required by Articles 5-16.
+
+  ### Activities
+
+  **2.1 Governance (Article 5)**
+  - Management body assumes ultimate responsibility for ICT risk management
+  - Define roles: ICT risk management function, ICT security officer, crisis management team
+  - Allocate budget for digital operational resilience
+  - Approve ICT risk management framework annually
+
+  **2.2 ICT Asset Management**
+  - Create complete inventory of all ICT assets, systems, and dependencies
+  - Map critical business functions to supporting ICT systems
+  - Identify single points of failure
+  - Document interconnections and data flows
+
+  **2.3 Protection and Prevention (Article 9)**
+  - Implement ICT security policies and procedures
+  - Network security measures and access controls
+  - Encryption and cryptographic key management
+  - Patch and vulnerability management
+  - Configuration management and hardening
+
+  **2.4 Detection and Response (Articles 10-12)**
+  - Deploy monitoring and detection capabilities for anomalous activities
+  - Define incident detection criteria aligned to DORA classification
+  - Establish incident response procedures
+  - Create business continuity and disaster recovery plans
+  - Define communication procedures for ICT incidents
+
+  **2.5 Recovery (Article 12)**
+  - Define recovery time and point objectives for critical functions
+  - Implement backup policies (separate from primary systems)
+  - Test recovery procedures regularly
+  - Maintain crisis communication plan
+
+  ### Deliverables
+  - ICT risk management framework document
+  - ICT asset inventory
+  - ICT security policies
+  - Incident response plan
+  - Business continuity plan
+  - Recovery procedures
+
+  ---
+
+  ## Phase 3: Incident Reporting and Third-Party Management (Months 5-8)
+
+  ### Objective
+  Build the incident classification and reporting capability, and establish the ICT third-party oversight program.
+
+  ### Activities
+
+  **3.1 Incident Classification (Article 18)**
+  - Implement classification methodology per RTS criteria:
+    - Clients/counterparts affected
+    - Data losses (availability, authenticity, integrity, confidentiality)
+    - Duration and service downtime
+    - Geographic spread
+    - Economic impact
+    - Criticality of services affected
+  - Major incident thresholds as defined by the ESA RTS
+  - Significant cyber threat criteria for voluntary reporting
+
+  **3.2 Incident Reporting Workflow (Articles 19-20)**
+  - Initial notification to competent authority (within 4 hours of classification as major)
+  - Intermediate report (within 72 hours)
+  - Final report (within 1 month)
+  - Test the reporting workflow with tabletop exercise
+  - Establish contact with competent authority reporting channel
+
+  **3.3 ICT Third-Party Register (Article 28(3))**
+  - Create register of all contractual arrangements for ICT services
+  - Classify as critical or non-critical ICT third-party providers
+  - For each: scope of services, data locations, subcontracting chain, service levels, audit rights
+
+  **3.4 Contractual Requirements (Article 30)**
+  - Review existing contracts against DORA Article 30 requirements:
+    - Service level descriptions and performance targets
+    - Incident notification obligations
+    - Data location requirements
+    - Audit and access rights
+    - Exit strategies and transition assistance
+    - Subcontracting conditions
+  - Renegotiate contracts that lack required provisions
+
+  **3.5 Concentration Risk (Article 29)**
+  - Assess concentration risk: how many critical functions depend on a single ICT provider
+  - Evaluate substitutability of critical providers
+  - Define concentration risk limits and monitoring
+
+  ### Deliverables
+  - Incident classification procedure
+  - Reporting workflow (tested)
+  - ICT third-party register
+  - Contract remediation plan
+  - Concentration risk assessment
+
+  ---
+
+  ## Phase 4: Resilience Testing Program (Months 7-10)
+
+  ### Objective
+  Establish the digital operational resilience testing program per Articles 24-27.
+
+  ### Activities
+
+  **4.1 Basic Testing Program (Article 25)**
+  - All financial entities must conduct at least annually:
+    - Vulnerability assessments and scans
+    - Open-source analysis
+    - Network security assessments
+    - Gap analyses
+    - Physical security reviews
+    - Software composition analysis
+    - Source code reviews (where feasible)
+    - Scenario-based tests
+    - Compatibility testing
+    - Performance testing
+    - End-to-end testing
+    - Penetration testing
+
+  **4.2 Threat-Led Penetration Testing (Article 26)**
+  - Applicable only to entities designated by the competent authority
+  - Must follow TIBER-EU framework (or national adaptation)
+  - Scope: critical functions and supporting ICT systems
+  - Frequency: at least every 3 years
+  - Conducted by qualified external testers (red team)
+  - Results shared with competent authority
+
+  **4.3 Testing Governance**
+  - Define test plan covering all required test types
+  - Assign test ownership and scheduling
+  - Establish remediation tracking for findings
+  - Report test results to management body
+
+  ### Deliverables
+  - Annual test plan
+  - Vulnerability assessment results
+  - Penetration test report
+  - TLPT report (if applicable)
+  - Remediation tracking register
+
+  ---
+
+  ## Phase 5: Ongoing Operations and Regulatory Readiness (Months 10-12)
+
+  ### Objective
+  Establish ongoing compliance operations and prepare for regulatory oversight.
+
+  ### Activities
+
+  **5.1 Regulatory Reporting Setup**
+  - Register with competent authority as required
+  - Submit ICT third-party register when requested
+  - Prepare for potential on-site inspections
+  - Maintain evidence of compliance for each DORA article
+
+  **5.2 Annual Cycle**
+  - Annual ICT risk management framework review by management body
+  - Annual resilience testing program execution
+  - Annual ICT third-party register update
+  - Annual training for management body on ICT risks
+  - Continuous incident monitoring and reporting
+
+  **5.3 Information Sharing (Article 45)**
+  - Evaluate participation in financial sector information sharing arrangements
+  - Implement data anonymization for shared threat intelligence
+  - Ensure compliance with data protection requirements
+
+  ### Deliverables
+  - Annual compliance calendar
+  - Regulatory reporting procedures
+  - Information sharing assessment
+  - Continuous monitoring dashboard
+
+  ---
+
+  ## Staffing Guidance
+
+  | Role | FTE (12-month program) | Notes |
+  |------|----------------------|-------|
+  | DORA Program Manager | 0.5-1.0 | Dedicated project lead |
+  | CISO | 0.3 | Framework oversight |
+  | ICT Risk Manager | 0.5 | Risk assessment, third-party oversight |
+  | Security Engineer | 1.0-2.0 | Detection, testing, remediation |
+  | Legal / Compliance | 0.3 | Contract review, regulatory liaison |
+  | Vendor Manager | 0.3 | Third-party register, contract negotiation |
+  | External Testers | Engagement | Penetration testing, TLPT |

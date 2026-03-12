@@ -1,0 +1,340 @@
+---
+id: milestones-iso27001
+type: milestone_framework
+category: compliance
+title: "ISO 27001 Certification Milestone Framework"
+summary: "Phase-gate milestones for ISO 27001:2022 certification with success criteria at each stage, from ISMS scoping through certification and surveillance."
+source: "ISO 27001:2022, ISO 27003, certification body practices"
+tags: "milestones, iso27001, isms, certification, phase-gate"
+metadata:
+  total_milestones: "8"
+  duration: "9-12 months"
+content: |
+  ## ISO 27001 Certification Milestones
+
+  ### M1: Scope Approved (Month 1)
+  **Gate Criteria:**
+  - ISMS scope statement written and approved by top management
+  - Context of the organization documented (Clause 4.1, 4.2)
+  - ISMS Manager appointed with defined authority
+  - Project plan with timeline and budget approved
+  **Evidence:** Signed scope statement, management commitment letter, project charter
+
+  ### M2: Risk Assessment Complete (Month 3)
+  **Gate Criteria:**
+  - Risk assessment methodology defined and approved
+  - All assets within scope inventoried with owners assigned
+  - Risk assessment conducted covering all in-scope assets/processes
+  - Risk register created with all risks scored
+  - Risk treatment options selected for all unacceptable risks
+  **Evidence:** Risk assessment report, risk register, asset inventory
+
+  ### M3: Statement of Applicability Approved (Month 4)
+  **Gate Criteria:**
+  - All 93 Annex A controls assessed for applicability
+  - Justification documented for each included and excluded control
+  - SoA approved by ISMS Manager and CISO
+  - Risk treatment plan created with owners and deadlines
+  **Evidence:** Statement of Applicability document, risk treatment plan
+
+  ### M4: Policies and Procedures Complete (Month 5)
+  **Gate Criteria:**
+  - All mandatory ISMS procedures documented (Clauses 6-10)
+  - Annex A supporting policies written (minimum: information security policy, access control, incident response, business continuity, acceptable use, cryptography)
+  - Document control procedure operational
+  - All documents reviewed and approved
+  **Evidence:** Complete policy set, document register, approval records
+
+  ### M5: Controls Implemented (Month 7)
+  **Gate Criteria:**
+  - All applicable Annex A controls implemented or have documented implementation plan for remaining items
+  - Technical controls deployed and configured
+  - Awareness training delivered to all in-scope personnel
+  - Evidence of control operation for at least one full cycle
+  **Evidence:** Control implementation records, training records, system configurations
+
+  ### M6: Internal Audit Complete (Month 8)
+  **Gate Criteria:**
+  - Internal audit covering all ISMS clauses and applicable Annex A controls
+  - Audit conducted by independent auditor(s)
+  - All findings classified (major NC, minor NC, observation)
+  - Corrective actions defined with owners and deadlines
+  **Evidence:** Internal audit report, corrective action records
+
+  ### M7: Management Review Complete (Month 8)
+  **Gate Criteria:**
+  - Management review conducted with top management
+  - All required inputs covered (Clause 9.3.2)
+  - Decisions documented on improvements, resource changes, risk acceptance
+  - Minutes signed by top management representative
+  **Evidence:** Management review minutes, decisions register
+
+  ### M8: Certification Achieved (Month 9-12)
+  **Gate Criteria:**
+  - Stage 1 audit completed and findings addressed
+  - Stage 2 audit completed
+  - No unresolved major non-conformities
+  - All minor non-conformities addressed within 90 days
+  - Certificate issued by accredited certification body
+  **Evidence:** Stage 1 report, Stage 2 report, certificate, corrective action closures
+
+---
+id: milestones-nis2-compliance
+type: milestone_framework
+category: compliance
+title: "NIS2 Compliance Milestone Framework"
+summary: "Phase-gate milestones for NIS2 Directive compliance with success criteria covering scoping, governance, Article 21 implementation, and ongoing compliance."
+source: "NIS2 Directive (EU) 2022/2555, ENISA guidelines"
+tags: "milestones, nis2, compliance, eu, phase-gate, article-21"
+metadata:
+  total_milestones: "7"
+  duration: "12 months"
+content: |
+  ## NIS2 Compliance Milestones
+
+  ### M1: Scoping and Classification Complete (Month 2)
+  **Gate Criteria:**
+  - Entity classification confirmed (essential vs. important)
+  - National transposition law identified and reviewed
+  - Gap analysis against all 10 Article 21 measures completed
+  - Remediation budget approved
+  **Evidence:** Classification document, gap analysis report, budget approval
+
+  ### M2: Governance Established (Month 4)
+  **Gate Criteria:**
+  - Management body briefed on NIS2 obligations
+  - Management body training completed and documented
+  - Information security policy approved
+  - Risk management framework defined
+  - Initial risk assessment completed
+  **Evidence:** Training records, policy documents, risk assessment report
+
+  ### M3: Incident Reporting Capability Ready (Month 6)
+  **Gate Criteria:**
+  - Incident detection and classification capability operational
+  - Notification workflow tested against Article 23 timelines (24h/72h/1 month)
+  - Contact established with national CSIRT
+  - Incident response playbooks for top 5 threat scenarios created
+  **Evidence:** Tabletop exercise report, CSIRT contact confirmation, playbooks
+
+  ### M4: Supply Chain Security Program Active (Month 7)
+  **Gate Criteria:**
+  - All ICT suppliers inventoried and classified by criticality
+  - Top-tier suppliers assessed
+  - Security requirements included in procurement contracts
+  - Supplier incident notification requirements established
+  **Evidence:** Supplier inventory, assessment reports, contract templates
+
+  ### M5: Technical Controls Deployed (Month 9)
+  **Gate Criteria:**
+  - MFA deployed for all privileged and remote access
+  - Vulnerability management program operational
+  - Business continuity plan tested
+  - Encryption deployed for sensitive data
+  - Network segmentation for critical systems
+  **Evidence:** MFA enrollment records, scan reports, BC test results, encryption records
+
+  ### M6: Training and Effectiveness Assessment (Month 11)
+  **Gate Criteria:**
+  - Organization-wide awareness training delivered (95%+ completion)
+  - Effectiveness assessment conducted (internal audit of all 10 measures)
+  - Penetration test of critical systems completed
+  - KPIs defined and dashboard operational
+  **Evidence:** Training completion report, audit report, penetration test report, KPI dashboard
+
+  ### M7: Registration and Ongoing Operations (Month 12)
+  **Gate Criteria:**
+  - Registered with national competent authority
+  - Annual compliance calendar established
+  - Continuous improvement plan documented
+  - All Article 21 measures operational
+  **Evidence:** Registration confirmation, compliance calendar, improvement plan
+
+---
+id: milestones-soc-build
+type: milestone_framework
+category: security-operations
+title: "SOC Build Milestone Framework"
+summary: "Phase-gate milestones for building a Security Operations Center from initial planning through full operational capability."
+source: "SANS SOC model, MITRE ATT&CK, NIST SP 800-61r3"
+tags: "milestones, soc, operations, detection, monitoring, phase-gate"
+metadata:
+  total_milestones: "6"
+  duration: "6 months"
+content: |
+  ## SOC Build Milestones
+
+  ### M1: SOC Charter Approved (Week 3)
+  **Gate Criteria:**
+  - SOC mission, scope, and service catalog defined
+  - Operating model selected (internal, hybrid, MSSP)
+  - Operating hours defined
+  - Budget and headcount approved
+  - SOC Manager hired or assigned
+  **Evidence:** SOC charter document, budget approval, hiring plan
+
+  ### M2: SIEM Operational (Week 8)
+  **Gate Criteria:**
+  - SIEM platform deployed and configured
+  - Critical log sources onboarded: authentication (IdP), firewall/network, endpoint (EDR), email, cloud audit
+  - Log parsing and normalization verified (no critical field extraction failures)
+  - Baseline detection rules deployed (vendor-provided pack)
+  - Data retention meets requirements (90+ days for security logs)
+  **Evidence:** SIEM dashboard, log source inventory, data ingestion metrics
+
+  ### M3: Team Operational (Week 10)
+  **Gate Criteria:**
+  - L1 and L2 analysts hired/assigned and trained
+  - Shift schedule active (covering defined operating hours)
+  - Analyst workstations configured with required tools
+  - Initial training completed (SIEM usage, triage procedures, escalation workflow)
+  **Evidence:** Team roster, shift schedule, training records
+
+  ### M4: Detection Content Deployed (Week 14)
+  **Gate Criteria:**
+  - Custom detection rules for organization-specific threats deployed
+  - Detection coverage mapped to MITRE ATT&CK (minimum: initial access, execution, persistence, credential access, lateral movement)
+  - False positive rate at manageable level (< 50% of alerts)
+  - Triage runbooks created for each alert type
+  **Evidence:** Detection rule inventory, ATT&CK coverage matrix, false positive metrics, runbooks
+
+  ### M5: Processes Validated (Week 18)
+  **Gate Criteria:**
+  - Alert triage workflow tested end-to-end
+  - Incident escalation procedure tested
+  - Shift handoff procedure working
+  - SOC-to-IR escalation pathway tested
+  - Purple team exercise completed with acceptable detection rate
+  **Evidence:** Purple team report, process documentation, exercise results
+
+  ### M6: Full Operational Capability (Week 24)
+  **Gate Criteria:**
+  - SOC operating at defined service levels for 30+ consecutive days
+  - MTTD and MTTR metrics within target
+  - Monthly reporting operational
+  - Continuous improvement process established (detection tuning cycle, lessons learned)
+  - Management satisfied with coverage and quality
+  **Evidence:** 30-day metrics, management sign-off, monthly report
+
+---
+id: milestones-vulnerability-management
+type: milestone_framework
+category: security-operations
+title: "Vulnerability Management Program Milestones"
+summary: "Phase-gate milestones for standing up a vulnerability management program from asset discovery through metrics-driven continuous improvement."
+source: "NIST SP 800-40r4, FIRST CVSS, CISA KEV, EPSS"
+tags: "milestones, vulnerability-management, scanning, patching, remediation"
+metadata:
+  total_milestones: "5"
+  duration: "2-3 months"
+content: |
+  ## Vulnerability Management Program Milestones
+
+  ### M1: Asset Inventory Complete (Week 2)
+  **Gate Criteria:**
+  - Network discovery scan completed for all subnets
+  - Cloud asset inventory integrated
+  - Assets classified by criticality tier (Tier 1/2/3)
+  - Asset owners assigned
+  - Coverage gap < 5% (assets visible vs. known inventory)
+  **Evidence:** Asset inventory report, coverage metrics
+
+  ### M2: Scanning Operational (Week 4)
+  **Gate Criteria:**
+  - Vulnerability scanner deployed with authenticated scanning configured
+  - Scan schedules active: external (weekly), internal (weekly), container (on build + weekly)
+  - Initial full scan completed
+  - Scan coverage > 95% of asset inventory
+  - Prioritization methodology documented and approved
+  **Evidence:** Scan results, scan coverage report, prioritization document
+
+  ### M3: Remediation Workflow Active (Week 6)
+  **Gate Criteria:**
+  - Automated ticket creation for findings above threshold
+  - Remediation SLAs defined and approved
+  - Exception process documented with approval workflow
+  - Patching schedule aligned with change management
+  - First remediation cycle completed
+  **Evidence:** Ticket system integration, SLA document, exception log
+
+  ### M4: Metrics Baseline Established (Week 8)
+  **Gate Criteria:**
+  - MTTR measured for first full cycle
+  - SLA compliance rate calculated
+  - Open vulnerability count baselined
+  - Vulnerability density per asset calculated
+  - Weekly and monthly report templates operational
+  **Evidence:** Metrics dashboard, baseline report
+
+  ### M5: Continuous Improvement Active (Week 10-12)
+  **Gate Criteria:**
+  - Second scan-remediation cycle completed
+  - MTTR trending data available (compare cycle 1 vs. cycle 2)
+  - Root cause analysis conducted for SLA breaches
+  - CISA KEV monitoring automated
+  - Executive quarterly report template approved
+  **Evidence:** Trend reports, root cause analysis, CISA KEV monitoring evidence
+
+---
+id: milestones-zero-trust
+type: milestone_framework
+category: architecture
+title: "Zero Trust Architecture Milestones"
+summary: "Phase-gate milestones for Zero Trust architecture rollout from identity foundation through continuous verification, aligned to CISA Zero Trust Maturity Model pillars."
+source: "NIST SP 800-207, CISA Zero Trust Maturity Model"
+tags: "milestones, zero-trust, architecture, identity, microsegmentation, cisa"
+metadata:
+  total_milestones: "6"
+  duration: "18 months"
+content: |
+  ## Zero Trust Architecture Milestones
+
+  ### M1: Strategy and Baseline Complete (Month 2)
+  **Gate Criteria:**
+  - Current state assessed against CISA ZTMM (5 pillars)
+  - Protect surfaces identified and documented
+  - Target maturity level defined per pillar
+  - Executive-approved Zero Trust strategy and roadmap
+  - Budget allocated for Year 1
+  **Evidence:** ZTMM assessment, strategy document, budget approval
+
+  ### M2: Identity Foundation Complete (Month 5)
+  **Gate Criteria:**
+  - Single identity provider with SSO for all applications
+  - MFA enforced for all users (100% enrollment)
+  - Conditional access policies active
+  - Privileged access management deployed
+  - JIT/JEA access for administrative operations
+  **Evidence:** IdP configuration, MFA enrollment metrics, PAM deployment records
+
+  ### M3: Device Trust Established (Month 8)
+  **Gate Criteria:**
+  - Endpoint management deployed (95%+ coverage)
+  - Device health policies enforced at authentication time
+  - Non-compliant device access restricted
+  - BYOD access policy implemented
+  **Evidence:** Device inventory, compliance policy configuration, access restriction logs
+
+  ### M4: Network Microsegmented (Month 11)
+  **Gate Criteria:**
+  - Critical workloads microsegmented
+  - Default-deny between segments enforced
+  - ZTNA replacing VPN for remote access
+  - East-west encryption deployed for priority segments
+  **Evidence:** Network architecture diagrams, firewall rules, ZTNA configuration
+
+  ### M5: Application Access Controlled (Month 14)
+  **Gate Criteria:**
+  - Per-application access policies active for Tier 1 applications
+  - Context-aware authorization (user + device + location + behavior)
+  - API gateway with authentication for all APIs
+  - Legacy applications proxied or isolated
+  **Evidence:** Access policy configurations, API gateway logs
+
+  ### M6: Continuous Verification Operational (Month 18)
+  **Gate Criteria:**
+  - UEBA deployed and tuned
+  - Automated response playbooks for Zero Trust policy violations
+  - ZTMM reassessment showing maturity advancement
+  - Continuous monitoring dashboard operational
+  **Evidence:** UEBA deployment, SOAR playbooks, ZTMM reassessment report

@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "mcp_name": "Security Program MCP",
+  "mcp_type": "security_knowledge",
+  "coverage_date": "2026-03-12",
+  "database_version": "1.0.0",
+  "sources": [
+    {
+      "id": "nist-csf",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "authority": "NIST",
+      "url": "https://www.nist.gov/cyberframework",
+      "version": "CSF 2.0",
+      "item_count": 8,
+      "item_type": "playbook",
+      "last_refresh": "2026-03-12",
+      "refresh_frequency": "manual",
+      "completeness": "partial",
+      "completeness_note": "Covers implementation methodology, not framework text"
+    },
+    {
+      "id": "iso-27001",
+      "name": "ISO 27001:2022 Methodology",
+      "authority": "ISO (derived)",
+      "url": "https://www.iso.org/standard/27001",
+      "version": "2022",
+      "item_count": 8,
+      "item_type": "template",
+      "last_refresh": "2026-03-12",
+      "refresh_frequency": "manual",
+      "completeness": "partial",
+      "completeness_note": "Implementation methodology, not ISO standard text"
+    },
+    {
+      "id": "program-management",
+      "name": "Security Program Management Practices",
+      "authority": "ISACA/SANS/(ISC)2",
+      "url": "https://www.isaca.org/resources",
+      "version": "2026-03",
+      "item_count": 53,
+      "item_type": "methodology",
+      "last_refresh": "2026-03-12",
+      "refresh_frequency": "manual",
+      "completeness": "partial",
+      "completeness_note": "Covers common program management patterns; not exhaustive"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "gap-privacy-program",
+      "description": "Privacy program playbooks (GDPR, CCPA implementation)",
+      "reason": "Planned for v1.1",
+      "impact": "medium",
+      "planned": true,
+      "target_version": "1.1"
+    },
+    {
+      "id": "gap-cloud-specific",
+      "description": "Cloud-provider-specific implementation guides (AWS, Azure, GCP)",
+      "reason": "Scope limited to framework-agnostic content",
+      "impact": "low",
+      "planned": false
+    },
+    {
+      "id": "gap-sector-specific",
+      "description": "Sector-specific playbooks (healthcare HIPAA, payment PCI DSS)",
+      "reason": "Planned for v1.2",
+      "impact": "medium",
+      "planned": true,
+      "target_version": "1.2"
+    }
+  ],
+  "tools": [
+    {
+      "name": "search_playbooks",
+      "category": "search",
+      "description": "Search implementation playbooks",
+      "data_sources": [
+        "nist-csf",
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_playbook",
+      "category": "lookup",
+      "description": "Get full playbook content",
+      "data_sources": [
+        "nist-csf",
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "search_templates",
+      "category": "search",
+      "description": "Search RACI, WBS, and change management templates",
+      "data_sources": [
+        "iso-27001",
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_template",
+      "category": "lookup",
+      "description": "Get full template content",
+      "data_sources": [
+        "iso-27001",
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "list_frameworks",
+      "category": "meta",
+      "description": "List content types and categories",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_dependency_map",
+      "category": "lookup",
+      "description": "Get dependency maps",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_milestones",
+      "category": "lookup",
+      "description": "Get milestone frameworks",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_governance_template",
+      "category": "lookup",
+      "description": "Get governance structures",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_communication_plan",
+      "category": "lookup",
+      "description": "Get communication plans",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_charter_template",
+      "category": "lookup",
+      "description": "Get program charters",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "get_resource_model",
+      "category": "lookup",
+      "description": "Get resource and staffing models",
+      "data_sources": [
+        "program-management"
+      ],
+      "verified": true
+    },
+    {
+      "name": "list_sources",
+      "category": "meta",
+      "description": "List data sources",
+      "data_sources": [],
+      "verified": true
+    },
+    {
+      "name": "about",
+      "category": "meta",
+      "description": "Server metadata",
+      "data_sources": [],
+      "verified": true
+    },
+    {
+      "name": "check_data_freshness",
+      "category": "meta",
+      "description": "Check data freshness",
+      "data_sources": [],
+      "verified": true
+    }
+  ],
+  "summary": {
+    "total_tools": 14,
+    "total_sources": 6,
+    "total_items": 53,
+    "db_size_mb": 0,
+    "known_gaps": 3,
+    "gaps_planned": 2,
+    "types": {
+      "change_management": 2,
+      "communication_plan": 5,
+      "dependency_map": 5,
+      "governance_structure": 5,
+      "milestone_framework": 5,
+      "playbook": 8,
+      "program_charter": 5,
+      "raci_template": 8,
+      "resource_model": 4,
+      "wbs_pattern": 6
+    }
+  }
+}

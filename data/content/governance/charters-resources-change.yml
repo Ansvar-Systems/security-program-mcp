@@ -1,0 +1,704 @@
+---
+id: charter-iso27001-program
+type: program_charter
+category: compliance
+title: "Program Charter -- ISO 27001 Certification Program"
+summary: "Program charter template for an ISO 27001 certification initiative covering purpose, scope, objectives, success criteria, governance, budget, timeline, risks, and sponsor responsibilities."
+source: "PMI PMBOK, ISO 27001:2022 Clause 5"
+tags: "charter, iso27001, program, certification, sponsorship, objectives"
+metadata:
+  sponsor_role: "CTO or CISO"
+  duration: "9-12 months"
+content: |
+  ## Program Charter: ISO 27001 Certification
+
+  ### 1. Purpose
+  Establish an Information Security Management System (ISMS) per ISO 27001:2022 and achieve third-party certification to meet customer contractual requirements, support sales pipeline, and reduce organizational risk.
+
+  ### 2. Scope
+  **In scope:** [Define ISMS boundaries -- e.g., "All IT systems, personnel, and processes supporting the SaaS platform and customer data processing at headquarters and cloud environments"]
+  **Out of scope:** [Explicitly exclude -- e.g., "Physical office security at satellite offices, legacy applications scheduled for decommission by Q3"]
+
+  ### 3. Objectives
+  - Achieve ISO 27001:2022 certification from an accredited certification body within 12 months
+  - Implement risk-based controls across all Annex A themes
+  - Pass Stage 2 audit with zero major non-conformities
+  - Establish sustainable ISMS operations (ongoing compliance, not one-time project)
+
+  ### 4. Success Criteria
+  | Criterion | Measure | Target |
+  |-----------|---------|--------|
+  | Certification achieved | Certificate issued | Within 12 months |
+  | Risk assessment coverage | Assets assessed / Total assets | 100% in scope |
+  | Control implementation | Controls implemented / Controls in SoA | 100% |
+  | Staff training | Trained / Total in-scope staff | 95%+ |
+  | Internal audit | Non-conformities addressed | 100% before Stage 2 |
+  | Budget adherence | Actual spend / Budget | Within 110% |
+
+  ### 5. Governance
+  - **Executive Sponsor:** [Name], [Title] -- approves scope changes, removes blockers, allocates resources
+  - **Program Manager:** [Name] -- day-to-day execution, progress reporting
+  - **Steering Committee:** Sponsor + Department Heads -- monthly review
+  - Decision authority: Sponsor approves scope changes >10% effort; Program Manager approves within scope
+
+  ### 6. Key Milestones
+  | Milestone | Target Date |
+  |-----------|------------|
+  | Scope approved | Month 1 |
+  | Risk assessment complete | Month 3 |
+  | SoA approved | Month 4 |
+  | Controls implemented | Month 7 |
+  | Internal audit complete | Month 8 |
+  | Management review complete | Month 8 |
+  | Stage 1 audit | Month 9 |
+  | Stage 2 audit | Month 10-11 |
+  | Certificate received | Month 12 |
+
+  ### 7. Budget
+  | Category | Estimate |
+  |----------|---------|
+  | Internal staff time | [X FTE-months] |
+  | GRC tooling | [Amount] |
+  | External consulting | [Amount] |
+  | Certification audit fees | [Amount] |
+  | Training | [Amount] |
+  | Contingency (15%) | [Amount] |
+  | **Total** | **[Amount]** |
+
+  ### 8. Key Risks
+  | Risk | Likelihood | Impact | Mitigation |
+  |------|-----------|--------|-----------|
+  | Scope creep | Medium | High | Fixed scope with change control |
+  | Resource constraints | High | Medium | Early resource commitment from departments |
+  | Audit delays | Low | Medium | Book auditor early, maintain schedule buffer |
+  | Staff resistance | Medium | Medium | Executive sponsorship, clear communication |
+
+  ### 9. Assumptions and Constraints
+  **Assumptions:**
+  - Executive sponsorship sustained for full program duration
+  - Department heads will allocate staff time for assessments and control implementation
+  - Current IT infrastructure supports required controls (no major infrastructure overhaul needed)
+
+  **Constraints:**
+  - Budget fixed at [amount] -- scope adjustments preferred over budget increases
+  - Certification must be achieved before [date] (contractual commitment to customer)
+  - Internal audit resource must be independent (may require external auditor)
+
+---
+id: charter-security-program
+type: program_charter
+category: risk-management
+title: "Program Charter -- Enterprise Security Program"
+summary: "Program charter template for establishing or maturing an enterprise security program covering vision, capabilities, governance, phased roadmap, and success metrics."
+source: "NIST CSF 2.0, ISACA COBIT, SANS Critical Security Controls"
+tags: "charter, security-program, enterprise, capabilities, roadmap"
+metadata:
+  sponsor_role: "CTO or CEO"
+  duration: "18-24 months (initial build)"
+content: |
+  ## Program Charter: Enterprise Security Program
+
+  ### 1. Purpose
+  Build a risk-based cybersecurity program that protects organizational assets, meets regulatory obligations, supports business growth, and establishes a sustainable security operations capability.
+
+  ### 2. Vision
+  A security program that enables the business by: protecting customer trust, meeting compliance requirements efficiently, reducing the cost of security incidents, and providing confidence to stakeholders that risks are managed.
+
+  ### 3. Scope
+  - Governance and risk management framework
+  - Identity and access management
+  - Vulnerability management
+  - Security monitoring and incident response
+  - Security awareness and training
+  - Compliance management (for selected frameworks)
+  - Third-party risk management
+  - Data protection
+
+  ### 4. Phased Roadmap
+  **Phase 1 (Months 1-6): Foundation**
+  - Hire CISO / Security Lead
+  - Conduct risk assessment
+  - Establish governance structure
+  - Implement identity and access management
+  - Launch vulnerability management
+
+  **Phase 2 (Months 6-12): Core Capabilities**
+  - Build incident response capability
+  - Deploy security monitoring (SIEM)
+  - Launch security awareness program
+  - Begin compliance program (framework selection + gap analysis)
+  - Implement third-party risk management
+
+  **Phase 3 (Months 12-18): Maturity**
+  - Achieve target compliance certifications
+  - Establish metrics and reporting
+  - Implement advanced detection (threat hunting)
+  - Build data protection program
+  - Conduct first external assessment
+
+  **Phase 4 (Months 18-24): Optimization**
+  - Automate security operations
+  - Implement continuous compliance monitoring
+  - Build red team / purple team capability
+  - Optimize based on metrics and lessons learned
+
+  ### 5. Success Criteria
+  | Criterion | Measure | Phase 1 Target | Phase 4 Target |
+  |-----------|---------|---------------|----------------|
+  | Risk posture | NIST CSF maturity score | Tier 2 (Risk Informed) | Tier 3 (Repeatable) |
+  | Vulnerability remediation | Critical patched within SLA | 70% | 95% |
+  | Incident response | MTTD | <7 days | <24 hours |
+  | Training completion | Staff trained | 80% | 95% |
+  | Compliance | Target certifications | Gap analysis complete | Certified |
+
+  ### 6. Governance
+  - **Executive Sponsor:** [CEO/CTO] -- strategic direction, budget authority, organizational mandate
+  - **Program Lead:** [CISO] -- program execution, team leadership
+  - **Steering Committee:** Sponsor + CxO team -- quarterly review
+  - **Working Group:** Security team + IT + business reps -- bi-weekly
+
+---
+id: charter-compliance-program
+type: program_charter
+category: compliance
+title: "Program Charter -- Multi-Framework Compliance Program"
+summary: "Program charter for managing compliance across multiple frameworks (ISO 27001, SOC 2, NIS2) with shared controls, unified evidence management, and coordinated audit schedule."
+source: "ISACA compliance management, UCF (Unified Compliance Framework)"
+tags: "charter, compliance, multi-framework, unified-controls, evidence"
+metadata:
+  sponsor_role: "CISO or VP Legal"
+  duration: "12-18 months"
+content: |
+  ## Program Charter: Multi-Framework Compliance
+
+  ### 1. Purpose
+  Establish a unified compliance program that satisfies multiple framework requirements (ISO 27001, SOC 2, NIS2, and future frameworks) through shared controls, avoiding duplicate effort and audit fatigue.
+
+  ### 2. Problem Statement
+  Organizations increasingly face requirements from multiple frameworks. Treating each as a separate program results in: duplicate controls, overlapping audits, conflicting policies, and unsustainable evidence collection burden.
+
+  ### 3. Approach: Unified Control Framework
+  - Map all framework requirements to a single internal control set
+  - Each control satisfies requirements from one or more frameworks
+  - Evidence collected once, used for multiple audits
+  - Single control owner per control, regardless of how many frameworks reference it
+
+  ### 4. Framework Mapping Strategy
+  | Internal Control Domain | ISO 27001 | SOC 2 | NIS2 |
+  |------------------------|-----------|-------|------|
+  | Access Management | A.5.15-A.5.18, A.8.2-A.8.5 | CC6 | Art.21(2)(i) |
+  | Change Management | A.8.9, A.8.25-A.8.33 | CC8 | Art.21(2)(e) |
+  | Incident Management | A.5.24-A.5.28 | CC7 | Art.21(2)(b) |
+  | Risk Management | Clause 6.1, A.5.7 | CC3, CC9 | Art.21(2)(a) |
+  | Business Continuity | A.5.29-A.5.30 | Availability | Art.21(2)(c) |
+  | Vendor Management | A.5.19-A.5.23 | CC9 | Art.21(2)(d) |
+  | Training | A.6.3 | CC1 | Art.21(2)(g) |
+  | Cryptography | A.8.24 | CC6 | Art.21(2)(h) |
+  | Monitoring | A.8.15-A.8.16 | CC4, CC7 | Art.21(2)(f) |
+
+  ### 5. Success Criteria
+  - All target frameworks satisfied from a single control set
+  - <20% additional effort per new framework added
+  - Single evidence repository serves all audits
+  - Audit preparation time reduced by 40% vs. separate programs
+  - No conflicting policies
+
+  ### 6. Key Milestones
+  | Milestone | Target |
+  |-----------|--------|
+  | Unified control mapping complete | Month 3 |
+  | GRC tool deployed | Month 4 |
+  | Shared evidence collection operational | Month 6 |
+  | First framework certification/attestation | Month 9-12 |
+  | Second framework certification/attestation | Month 12-15 |
+  | Annual renewal cycle established | Month 18 |
+
+---
+id: charter-incident-response
+type: program_charter
+category: security-operations
+title: "Program Charter -- Incident Response Program"
+summary: "Program charter for building an incident response capability from scratch, covering team structure, tooling, playbooks, exercises, and operational readiness criteria."
+source: "NIST SP 800-61r3, FIRST CSIRT Framework"
+tags: "charter, incident-response, csirt, program, readiness"
+metadata:
+  sponsor_role: "CISO"
+  duration: "3-4 months"
+content: |
+  ## Program Charter: Incident Response Program
+
+  ### 1. Purpose
+  Establish an incident response capability that can detect, contain, eradicate, and recover from security incidents while meeting regulatory notification requirements and preserving forensic evidence.
+
+  ### 2. Scope
+  - Formation of IR team (dedicated or hybrid model)
+  - Playbooks for top 5 incident types
+  - Detection and forensic tooling
+  - Communication procedures (internal and external)
+  - Testing and validation through exercises
+  - Metrics and continuous improvement
+
+  ### 3. Success Criteria
+  | Criterion | Measure | Target |
+  |-----------|---------|--------|
+  | Team availability | On-call coverage | 24x7 |
+  | Playbook coverage | Top incident types covered | 5 playbooks minimum |
+  | Detection | High-severity alerts triaged | Within 30 minutes |
+  | Containment | Active threats contained | Within 4 hours |
+  | Notification | Regulatory timelines met | 100% compliance |
+  | Validation | Exercise conducted | Before go-live |
+
+  ### 4. Out of Scope
+  - SOC build (separate initiative; IR program works with existing monitoring)
+  - Threat hunting (Phase 2 capability)
+  - Digital forensics lab (external retainer used instead)
+
+  ### 5. Budget
+  | Category | Estimate |
+  |----------|---------|
+  | Forensic retainer agreement | [Amount/year] |
+  | EDR/SIEM enhancements | [Amount] |
+  | Communication tools | [Amount] |
+  | Training (SANS, GIAC) | [Amount per analyst] |
+  | Tabletop exercise facilitation | [Amount] |
+  | **Total** | **[Amount]** |
+
+---
+id: charter-zero-trust
+type: program_charter
+category: architecture
+title: "Program Charter -- Zero Trust Architecture Program"
+summary: "Program charter for a multi-year Zero Trust architecture transformation covering identity, device, network, application, and data pillars with phased rollout."
+source: "NIST SP 800-207, CISA Zero Trust Maturity Model"
+tags: "charter, zero-trust, architecture, transformation, multi-year"
+metadata:
+  sponsor_role: "CTO"
+  duration: "18-24 months"
+content: |
+  ## Program Charter: Zero Trust Architecture
+
+  ### 1. Purpose
+  Transform the organization's security architecture from perimeter-based to Zero Trust, reducing the attack surface and impact of breaches by enforcing continuous verification for all access.
+
+  ### 2. Current State
+  - Perimeter-based security model with flat internal networks
+  - VPN for remote access grants broad network access
+  - Implicit trust for devices on corporate network
+  - Limited visibility into lateral movement
+
+  ### 3. Target State
+  - Every access request authenticated, authorized, and encrypted
+  - Access decisions based on identity + device health + context
+  - Microsegmented networks with default-deny between segments
+  - Per-application access replacing VPN
+  - Continuous monitoring and automated response
+
+  ### 4. Phased Approach
+  | Phase | Focus | Duration | Key Deliverable |
+  |-------|-------|----------|----------------|
+  | 1 | Identity foundation | 3 months | SSO + MFA for all users |
+  | 2 | Device trust | 3 months | Device health as access condition |
+  | 3 | Network segmentation | 4 months | Critical workloads microsegmented |
+  | 4 | Application access | 4 months | ZTNA replacing VPN |
+  | 5 | Data protection | 4 months | DLP and classification deployed |
+  | 6 | Continuous verification | 4 months | UEBA and automated response |
+
+  ### 5. Success Criteria
+  - CISA ZTMM advancement: from Traditional/Initial to Advanced on all 5 pillars
+  - VPN usage reduced by 90%
+  - Lateral movement detectable within 1 hour
+  - All privileged access via PAM with session recording
+
+  ### 6. Key Risks
+  - User disruption during transition (mitigate: phased rollout, communications plan)
+  - Legacy applications incompatible with modern auth (mitigate: access proxy, parallel operation)
+  - Budget constraints (mitigate: prioritize highest-risk pillars first)
+  - Vendor lock-in (mitigate: standards-based approach, avoid single-vendor stack)
+
+---
+id: resource-security-team-small
+type: resource_model
+category: risk-management
+title: "Resource Model -- Small Organization Security Team (50-200 employees)"
+summary: "Staffing model, role definitions, and budget framework for building a security team in a small organization with 50-200 employees."
+source: "SANS security team models, industry salary surveys"
+tags: "resource-model, staffing, team, budget, small-organization, roles"
+metadata:
+  team_size: "2-4 FTE"
+  budget_range: "EUR 200K-500K/year (staff + tools)"
+content: |
+  ## Resource Model: Small Organization (50-200 employees)
+
+  ### Team Structure
+  For organizations with 50-200 employees, a dedicated security team of 2-4 people covers core needs. Many functions are shared with IT.
+
+  **Core Team (2 FTE minimum):**
+
+  | Role | FTE | Responsibilities | Required Skills |
+  |------|-----|-----------------|-----------------|
+  | Security Manager / CISO | 1.0 | Strategy, governance, risk management, compliance, vendor oversight, board reporting | GRC experience, management, 7+ years security |
+  | Security Engineer | 1.0 | Vulnerability management, monitoring, incident response, technical controls, security tooling | Technical security, SIEM, networking, 3+ years |
+
+  **Extended Team (add as budget allows):**
+
+  | Role | FTE | When to Add |
+  |------|-----|------------|
+  | GRC Analyst | 0.5-1.0 | When pursuing certification (ISO 27001, SOC 2) |
+  | SOC Analyst | 1.0 | When 24x7 monitoring is required (consider MSSP instead) |
+
+  ### Shared Responsibilities (with IT)
+  - Patch management: IT Operations with security oversight
+  - Identity management: IT Operations with security policy
+  - Backup and recovery: IT Operations with security requirements
+  - Endpoint management: IT Operations with security configuration
+
+  ### Outsourcing Strategy
+  - **Outsource:** Penetration testing (annual), forensic incident response (retainer), 24x7 monitoring (MSSP), specialized compliance consulting
+  - **Keep in-house:** Risk management, policy, vendor oversight, security architecture decisions, incident coordination
+
+  ### Budget Framework
+
+  | Category | Annual Range | Notes |
+  |----------|-------------|-------|
+  | Staff (2 FTE) | EUR 120K-200K | Varies by location and seniority |
+  | SIEM / Monitoring | EUR 15K-40K | Cloud SIEM or MSSP |
+  | Vulnerability scanner | EUR 5K-20K | Depends on asset count |
+  | EDR | EUR 10K-30K | Per-endpoint licensing |
+  | Penetration testing | EUR 10K-30K | Annual external assessment |
+  | Training and certifications | EUR 5K-15K | Per team member per year |
+  | GRC tool (optional) | EUR 5K-20K | If pursuing certification |
+  | Forensic retainer | EUR 5K-15K | Annual retainer fee |
+  | Contingency (10%) | EUR 15K-35K | |
+  | **Total** | **EUR 190K-405K** | |
+
+---
+id: resource-security-team-medium
+type: resource_model
+category: risk-management
+title: "Resource Model -- Medium Organization Security Team (200-1000 employees)"
+summary: "Staffing model, role definitions, and budget framework for building a security team in a medium organization with 200-1000 employees."
+source: "SANS security team models, industry benchmarks"
+tags: "resource-model, staffing, team, budget, medium-organization, roles"
+metadata:
+  team_size: "5-12 FTE"
+  budget_range: "EUR 600K-2M/year (staff + tools)"
+content: |
+  ## Resource Model: Medium Organization (200-1000 employees)
+
+  ### Team Structure
+  Medium organizations need dedicated security functions with clear role separation.
+
+  **Leadership (2 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | CISO | 1.0 | Strategy, governance, board reporting, regulatory |
+  | Security Manager | 1.0 | Operations oversight, team management, project delivery |
+
+  **Security Operations (2-4 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | Senior Security Engineer | 1.0 | Architecture, complex investigations, tool design |
+  | Security Engineer | 1.0-2.0 | Vulnerability management, monitoring, incident response |
+  | SOC Analyst | 0-1.0 | Alert triage, L1 monitoring (or MSSP) |
+
+  **Governance, Risk, and Compliance (1-3 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | GRC Manager | 1.0 | Compliance programs, audit coordination, policy |
+  | GRC Analyst | 0-1.0 | Evidence collection, risk assessments, vendor reviews |
+  | Security Awareness Specialist | 0-1.0 | Training program, phishing simulations (can be part-time) |
+
+  **Specialized (as needed):**
+  | Role | FTE | When |
+  |------|-----|------|
+  | Application Security Engineer | 1.0 | When in-house development exceeds 20 developers |
+  | Identity & Access Manager | 0.5-1.0 | When IAM complexity requires dedicated ownership |
+
+  ### Reporting Structure
+  ```
+  CISO
+    ├── Security Manager
+    │     ├── Security Engineers
+    │     └── SOC Analysts
+    ├── GRC Manager
+    │     └── GRC Analysts
+    └── (dotted line) AppSec Engineer
+  ```
+
+  ### Budget Framework
+
+  | Category | Annual Range | Notes |
+  |----------|-------------|-------|
+  | Staff (5-8 FTE) | EUR 350K-700K | Varies by location |
+  | SIEM | EUR 40K-120K | Scale with data volume |
+  | EDR | EUR 30K-80K | Per-endpoint |
+  | Vulnerability management | EUR 20K-60K | Scanner + management platform |
+  | Identity security (PAM) | EUR 20K-60K | Privileged access management |
+  | Penetration testing | EUR 30K-80K | Multiple engagements per year |
+  | GRC platform | EUR 20K-60K | Compliance management |
+  | Security awareness platform | EUR 10K-30K | Phishing simulation included |
+  | MSSP (if outsourcing SOC) | EUR 60K-180K | 24x7 monitoring |
+  | Training and conferences | EUR 20K-40K | |
+  | Consulting (specialized) | EUR 30K-100K | Architecture reviews, audits |
+  | Contingency (10%) | EUR 60K-140K | |
+  | **Total** | **EUR 690K-1.65M** | |
+
+---
+id: resource-security-team-large
+type: resource_model
+category: risk-management
+title: "Resource Model -- Large Organization Security Team (1000+ employees)"
+summary: "Staffing model, role definitions, and budget framework for a security organization in large enterprises with 1000+ employees."
+source: "SANS security team models, Gartner benchmarks"
+tags: "resource-model, staffing, team, budget, large-organization, enterprise, roles"
+metadata:
+  team_size: "15-40+ FTE"
+  budget_range: "EUR 2M-8M+/year (staff + tools)"
+content: |
+  ## Resource Model: Large Organization (1000+ employees)
+
+  ### Team Structure
+  Large organizations need a full security organization with specialized teams.
+
+  **Executive Office (2-3 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | CISO | 1.0 | Strategy, board reporting, regulatory, budget |
+  | Deputy CISO / Security Director | 1.0 | Operations oversight, CISO succession |
+  | Executive Assistant / Program Coordinator | 0-1.0 | Reporting, scheduling, budget tracking |
+
+  **Security Engineering (4-8 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | Security Architecture Lead | 1.0 | Architecture standards, design reviews |
+  | Cloud Security Engineer | 1.0-2.0 | Cloud posture, CSPM, cloud-native security |
+  | Network Security Engineer | 1.0-2.0 | Firewalls, segmentation, DDoS protection |
+  | Application Security Engineers | 1.0-3.0 | SAST/DAST, code review, developer training |
+
+  **Security Operations (5-12 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | SOC Manager | 1.0 | SOC operations, shift management |
+  | Detection Engineers | 1.0-2.0 | Detection content, SIEM optimization |
+  | SOC Analysts (L1-L3) | 3.0-6.0 | 24x7 monitoring, triage, investigation |
+  | Threat Intelligence Analyst | 0-1.0 | Threat intel feeds, hunting support |
+  | Threat Hunter | 0-2.0 | Proactive hunting, purple team |
+
+  **GRC (3-6 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | GRC Director | 1.0 | Compliance strategy, audit management |
+  | Compliance Analysts | 1.0-2.0 | Framework compliance, evidence, audits |
+  | Risk Analysts | 1.0-2.0 | Risk assessments, risk register, vendor risk |
+  | Privacy Officer (DPO) | 0-1.0 | Data protection, GDPR, privacy |
+
+  **Identity and Access (2-4 FTE):**
+  | Role | FTE | Focus |
+  |------|-----|-------|
+  | IAM Manager | 1.0 | IAM strategy, governance |
+  | IAM Engineers | 1.0-3.0 | IdP, PAM, access reviews, automation |
+
+  ### Industry Benchmarks
+  - Security staff ratio: 1 security FTE per 100-200 total employees
+  - Security budget: 5-10% of IT budget (industry average ~6%)
+  - CISO reporting: directly to CEO or CTO (not buried under IT Operations)
+
+  ### Budget Framework
+
+  | Category | Annual Range |
+  |----------|-------------|
+  | Staff (15-30 FTE) | EUR 1.2M-3.5M |
+  | SIEM / SOAR | EUR 150K-500K |
+  | EDR / XDR | EUR 100K-400K |
+  | Vulnerability management | EUR 50K-200K |
+  | Identity security (PAM, IGA) | EUR 100K-300K |
+  | Cloud security (CSPM, CWPP) | EUR 50K-200K |
+  | DLP / Data security | EUR 50K-200K |
+  | Application security tools | EUR 50K-200K |
+  | Penetration testing + red team | EUR 100K-300K |
+  | GRC platform | EUR 50K-150K |
+  | Security awareness | EUR 20K-60K |
+  | Threat intelligence | EUR 30K-100K |
+  | Training and conferences | EUR 50K-150K |
+  | Consulting | EUR 50K-200K |
+  | Contingency (10%) | EUR 200K-650K |
+  | **Total** | **EUR 2.3M-7.1M** |
+
+---
+id: resource-compliance-team
+type: resource_model
+category: compliance
+title: "Resource Model -- Compliance Team for Multi-Framework Program"
+summary: "Staffing model for managing compliance across multiple frameworks (ISO 27001 + SOC 2 + NIS2) with role definitions and effort estimates."
+source: "ISACA compliance management, industry benchmarks"
+tags: "resource-model, compliance, multi-framework, staffing, effort"
+metadata:
+  team_size: "2-5 FTE (dedicated compliance)"
+  budget_range: "EUR 200K-600K/year (compliance staff + tools + audits)"
+content: |
+  ## Resource Model: Multi-Framework Compliance Team
+
+  ### Effort Estimate by Framework
+
+  | Framework | Initial Build (FTE-months) | Annual Maintenance (FTE/year) |
+  |-----------|--------------------------|------------------------------|
+  | ISO 27001 | 6-12 | 0.5-1.0 |
+  | SOC 2 Type II | 4-8 | 0.5-1.0 |
+  | NIS2 | 4-8 | 0.3-0.5 |
+  | DORA | 6-10 | 0.5-1.0 |
+  | GDPR (ongoing) | 2-4 (refresh) | 0.3-0.5 |
+
+  **Shared effort:** Using a unified control framework reduces total effort by 30-40%. A control implemented for ISO 27001 also satisfies SOC 2 CC6 and NIS2 Article 21.
+
+  ### Team Structure
+
+  | Role | FTE | Responsibilities |
+  |------|-----|-----------------|
+  | GRC Manager | 1.0 | Program leadership, audit coordination, stakeholder management |
+  | Compliance Analyst | 1.0-2.0 | Control mapping, evidence collection, gap tracking |
+  | Risk Analyst | 0.5-1.0 | Risk assessments, vendor reviews, risk register |
+  | Audit Coordinator | 0.5 | Audit scheduling, evidence packaging, auditor liaison |
+
+  ### Annual Audit Cost by Framework
+
+  | Framework | Initial Certification/Attestation | Annual Maintenance |
+  |-----------|--------------------------------|-------------------|
+  | ISO 27001 | EUR 15K-50K | EUR 8K-25K (surveillance) |
+  | SOC 2 Type II | USD 30K-80K | USD 25K-60K (recurring) |
+  | NIS2 | N/A (regulatory, not certification) | Internal cost only |
+  | DORA | N/A (regulatory) | Internal cost only |
+
+  ### Tool Requirements
+
+  | Tool Category | Purpose | Cost Range |
+  |--------------|---------|-----------|
+  | GRC platform | Control mapping, evidence management, risk register | EUR 15K-60K/year |
+  | Policy management | Version control, approval workflows, distribution | EUR 5K-20K/year |
+  | Training platform | Security awareness, phishing simulation | EUR 5K-20K/year |
+  | Vendor risk management | Questionnaires, ratings, monitoring | EUR 10K-40K/year |
+
+---
+id: change-mgmt-security-controls
+type: change_management
+category: risk-management
+title: "Change Management -- Security Control Implementation"
+summary: "Change management strategy for rolling out new security controls (MFA, EDR, DLP) with minimal user disruption, covering stakeholder analysis, communication, training, and resistance management."
+source: "ADKAR model, Kotter's 8-step model"
+tags: "change-management, controls, adoption, resistance, training, communication"
+metadata:
+  roles: "Change Lead, Technical Lead, Communications, Department Champions"
+  deliverables: "Impact assessment, communication plan, training plan, adoption metrics"
+content: |
+  ## Change Management: Security Control Rollout
+
+  ### Change Impact Assessment
+
+  Before rolling out any security control that affects end users, assess:
+
+  | Factor | Low Impact | Medium Impact | High Impact |
+  |--------|-----------|--------------|-------------|
+  | Daily workflow change | No change | Minor adjustment | New steps required |
+  | Tool change | Same tools | New tool (familiar type) | New tool (unfamiliar) |
+  | Authentication change | No change | Additional factor (MFA) | New credential type |
+  | Access change | No change | Some restrictions | Significant restrictions |
+  | Performance impact | None | Minor delays | Noticeable slowdown |
+
+  ### ADKAR Framework for Security Changes
+
+  **Awareness:** Why this change is happening
+  - Communicate the business reason (regulatory requirement, incident prevention, customer demand)
+  - Do not lead with fear -- lead with purpose
+  - Use real examples relevant to your industry
+
+  **Desire:** Motivation to support the change
+  - Explain benefits to the individual (protection of their data, simpler access long-term)
+  - Address "what's in it for me?"
+  - Secure management endorsement
+
+  **Knowledge:** How to work with the new control
+  - Provide clear, step-by-step instructions
+  - Offer multiple learning formats (video, written guide, live demo)
+  - Anticipate common questions and create FAQ
+
+  **Ability:** Capability to perform new behaviors
+  - Provide hands-on practice before go-live
+  - Offer help desk support during transition
+  - Allow grace period for adoption (warn before enforcing)
+
+  **Reinforcement:** Sustaining the change
+  - Monitor adoption metrics
+  - Recognize early adopters
+  - Address non-adoption through management chain (not punishment)
+  - Collect feedback and adjust
+
+  ### Rollout Strategy for Common Controls
+
+  **MFA Rollout:**
+  - Week 1-2: Announce, explain, provide enrollment guides
+  - Week 3-4: Voluntary enrollment period with support
+  - Week 5-6: Mandatory enrollment (IT-assisted for stragglers)
+  - Week 7+: Enforcement enabled (block access without MFA)
+  - Grace period: 2 weeks with reminder on each login
+
+  **EDR Deployment:**
+  - Silent deployment by IT (no user action required)
+  - Communicate what was deployed and why
+  - Address privacy concerns proactively ("monitors for threats, not employee behavior")
+  - Provide IT contact for performance issues
+
+  **DLP Controls:**
+  - Phase 1: Monitor only (collect data, no blocks)
+  - Phase 2: Warn (user gets notification, can override with justification)
+  - Phase 3: Block (approval required for policy violations)
+  - Communicate each phase transition with examples of what triggers alerts
+
+  ### Resistance Management Strategies
+
+  | Resistance Type | Indicator | Response |
+  |----------------|-----------|----------|
+  | "It slows me down" | Complaints about workflow | Optimize the control, provide shortcuts |
+  | "I don't understand why" | Questions, confusion | Improve communication, do town hall |
+  | "I don't trust it" | Privacy concerns | Transparent policy, limit data collection |
+  | "I can't do it" | Help desk calls | More training, simpler guides |
+  | "Rules don't apply to me" | Executive exception requests | Enforce equally, sponsor must support |
+
+---
+id: change-mgmt-policy-update
+type: change_management
+category: compliance
+title: "Change Management -- Security Policy Updates"
+summary: "Change management strategy for rolling out new or significantly updated security policies, covering stakeholder engagement, review cycles, training, acknowledgment tracking, and enforcement."
+source: "ISO 27001:2022 Clause 5.2, ISACA governance framework"
+tags: "change-management, policy, compliance, acknowledgment, training"
+metadata:
+  roles: "Policy Owner, Legal, HR, Department Heads, Communications"
+  deliverables: "Policy draft, review comments, training materials, acknowledgment records"
+content: |
+  ## Change Management: Security Policy Updates
+
+  ### Policy Update Lifecycle
+
+  1. **Draft:** Policy Owner creates new or updated policy
+  2. **Legal review:** Legal validates regulatory alignment and enforceability
+  3. **Stakeholder review:** Department Heads review for operational feasibility (2-week review window)
+  4. **Revision:** Incorporate feedback, resolve conflicts
+  5. **Approval:** CISO or Steering Committee approves
+  6. **Communication:** Announce to affected staff with summary of changes
+  7. **Training:** Deliver training on material changes (not required for minor updates)
+  8. **Acknowledgment:** Staff acknowledge they have read and understand the policy
+  9. **Enforcement:** Policy effective after communication + grace period
+
+  ### Communication by Change Magnitude
+
+  | Change Type | Communication | Training | Grace Period |
+  |-------------|--------------|----------|-------------|
+  | Minor (typo, clarification) | Change log update | None | None |
+  | Moderate (new section, process change) | Email + intranet post | Optional briefing | 2 weeks |
+  | Major (new policy, significant change) | All-hands mention + email + intranet | Required training | 4 weeks |
+  | Regulatory-driven (NIS2, DORA, GDPR) | Formal announcement from CISO | Required training | As regulation requires |
+
+  ### Acknowledgment Tracking
+  - Use HR system or GRC tool for policy acknowledgment
+  - Track: policy name, version, staff name, date acknowledged
+  - Escalation for non-acknowledgment: 1 reminder at 1 week, manager notification at 2 weeks, HR escalation at 4 weeks
+  - Target: 95%+ acknowledgment within grace period
