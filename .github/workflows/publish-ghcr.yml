@@ -7,10 +7,7 @@ on:
       - 'data/**'
       - 'package.json'
       - 'Dockerfile'
-  workflow_call:
-    secrets:
-      GITHUB_TOKEN:
-        required: true
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
