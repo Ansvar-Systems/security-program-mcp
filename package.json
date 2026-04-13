@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",
-    "better-sqlite3": "^12.8.0",
+    "better-sqlite3": "^12.9.0",
     "express": "^5.2.1"
   },
   "devDependencies": {
