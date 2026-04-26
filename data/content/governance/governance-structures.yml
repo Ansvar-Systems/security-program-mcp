@@ -198,7 +198,7 @@ type: governance_structure
 category: compliance
 title: "NIS2 Compliance Governance Structure"
 summary: "Governance structure meeting NIS2 Article 20 management body accountability requirements, including management training, cybersecurity oversight, and compliance reporting."
-source: "NIS2 Directive Article 20, ENISA governance guidance"
+source: "NIS2 Directive Article 20 (EU) 2022/2555 via EUR-Lex"
 tags: "governance, nis2, management-body, accountability, oversight, eu"
 metadata:
   committees: "3 (Management Body, Cybersecurity Committee, Operational Team)"
