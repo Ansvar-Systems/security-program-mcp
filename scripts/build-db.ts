@@ -351,50 +351,27 @@ function main() {
     mcp_type: "security_knowledge",
     coverage_date: new Date().toISOString().split("T")[0],
     database_version: "1.0.0",
-    sources: [
-      {
-        id: "nist-csf",
-        name: "NIST Cybersecurity Framework 2.0",
-        authority: "NIST",
-        url: "https://www.nist.gov/cyberframework",
-        version: "CSF 2.0",
-        item_count: typeSummary["playbook"] || 0,
-        item_type: "playbook",
-        last_refresh: new Date().toISOString().split("T")[0],
-        refresh_frequency: "manual",
-        completeness: "partial",
-        completeness_note:
-          "Covers implementation methodology, not framework text",
-      },
-      {
-        id: "iso-27001",
-        name: "ISO 27001:2022 Methodology",
-        authority: "ISO (derived)",
-        url: "https://www.iso.org/standard/27001",
-        version: "2022",
-        item_count: typeSummary["raci_template"] || 0,
-        item_type: "template",
-        last_refresh: new Date().toISOString().split("T")[0],
-        refresh_frequency: "manual",
-        completeness: "partial",
-        completeness_note:
-          "Implementation methodology, not ISO standard text",
-      },
-      {
-        id: "program-management",
-        name: "Security Program Management Practices",
-        authority: "ISACA/SANS/(ISC)2",
-        url: "https://www.isaca.org/resources",
-        version: "2026-03",
-        item_count: count.cnt,
-        item_type: "methodology",
-        last_refresh: new Date().toISOString().split("T")[0],
-        refresh_frequency: "manual",
-        completeness: "partial",
-        completeness_note:
-          "Covers common program management patterns; not exhaustive",
-      },
-    ],
+    // Sources are generated per actual DB type so verify-coverage.ts
+    // (which queries `WHERE type = source.id`) can validate counts.
+    // The pre-scrub design used aggregate category names (nist-csf,
+    // iso-27001, program-management) that never matched DB type values.
+    sources: types.map((t) => ({
+      id: t.type,
+      name: t.type
+        .split("_")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" "),
+      authority: "Ansvar Systems (post-quarantine surviving content)",
+      url: "https://ansvar.eu",
+      version: "2.0.0",
+      item_count: t.cnt,
+      item_type: t.type,
+      last_refresh: new Date().toISOString().split("T")[0],
+      refresh_frequency: "manual",
+      completeness: "partial",
+      completeness_note:
+        "Surviving content after Red MCP Legal Remediation scrub (2026-04-26). ENISA-attributed content removed; remaining items derive from the EU NIS2 directive text directly.",
+    })),
     gaps: [
       {
         id: "gap-privacy-program",
