@@ -39,23 +39,24 @@ sources:
     languages:
       - "en"
 
-  - name: "NIS2 Directive Implementation Guidance"
-    authority: "European Union Agency for Cybersecurity (ENISA)"
-    official_url: "https://www.enisa.europa.eu/topics/nis-directive"
-    retrieval_method: "MANUAL"
-    format: "Structured methodology"
-    authentication: "none"
-    update_frequency: "manual"
-    license:
-      type: "ENISA publications license"
-      url: "https://www.enisa.europa.eu/about-enisa/legal-notice"
-      summary: "Freely available for non-commercial use with attribution"
-    coverage:
-      scope: "NIS2 compliance implementation phases, Article 21 controls, incident reporting"
-      version: "Directive (EU) 2022/2555"
-      item_count: "Article 21 measures, 10 security domains"
-    languages:
-      - "en"
+  # QUARANTINE NOTE (2026-04-26): ENISA NIS2 Implementation Guidance was removed.
+  # The ENISA publications license ("freely available for non-commercial use with attribution")
+  # is incompatible with Ansvar commercial use. The affected playbook, milestone framework,
+  # and governance structure content derived from ENISA guidance have been stripped.
+  #
+  # Backfill candidate: EUR-Lex NIS2 implementing acts and delegated regulations
+  #   https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
+  #   License: EU legislation is freely reusable under the EU reuse policy.
+  #
+  # Fleet-overlap note: the eu-regulations MCP already indexes the NIS2 Directive
+  # (Directive 2022/2555) and its implementing acts at article level. Before Phase 4
+  # backfill work, verify whether eu-regulations already serves NIS2 at adequate
+  # depth, which would make this source permanently empty. Document the outcome in
+  # CHANGELOG under the 2.0.0 entry.
+  #
+  # NIS2 as a legal regime (article references, directive text) is NOT contaminated;
+  # only ENISA NC-licensed implementation guidance is removed. EUR-Lex citations
+  # pointing to Directive 2022/2555 remain acceptable.
 
   - name: "SOC 2 Trust Services Criteria"
     authority: "American Institute of Certified Public Accountants (AICPA)"

@@ -8,12 +8,14 @@ export async function listSources() {
     `|--------|-----------|---------|---------|`,
     `| NIST CSF 2.0 | NIST | CSF 2.0 (Feb 2024) | Public Domain |`,
     `| ISO 27001:2022 Methodology | ISO (derived guidance) | ISO 27001:2022 | Derived methodology |`,
-    `| NIS2 Implementation Guidance | ENISA | Directive (EU) 2022/2555 | ENISA publications license |`,
+    `| NIS2 Directive | EUR-Lex (EU legislation) | Directive 2022/2555 | EU reuse policy (free) |`,
     `| SOC 2 Preparation Methodology | AICPA (derived guidance) | 2017 TSC (2022 updates) | Derived methodology |`,
     `| DORA Implementation | ESAs | Regulation (EU) 2022/2554 | EU legislation |`,
     `| Program Management Practices | ISACA, SANS, (ISC)2 | Current (2026-03) | Derived methodology |`,
     ``,
     `All content is derived methodology -- not reproduced framework text.`,
+    `NIS2 playbook content was quarantined 2026-04-26 (ENISA NC license). NIS2 governance`,
+    `and milestone frameworks now cite only the directive text via EUR-Lex.`,
     `For detailed coverage, see COVERAGE.md.`,
   ];
 
@@ -29,13 +31,13 @@ export async function about() {
 
   const result = {
     name: "Security Program MCP",
-    version: "1.0.0",
+    version: "2.0.0",
     category: "security_knowledge",
     description:
       "Security program planning methodologies: implementation playbooks, RACI templates, WBS patterns, milestone frameworks, governance structures, communication plans, program charters, and resource models.",
     stats: {
       total_items: total,
-      total_sources: 6,
+      total_sources: 5,
       content_types: types.length,
     },
     data_sources: [
@@ -52,10 +54,10 @@ export async function about() {
         version: "2022",
       },
       {
-        name: "NIS2 Implementation",
-        url: "https://www.enisa.europa.eu/topics/nis-directive",
-        authority: "ENISA",
-        version: "2022/2555",
+        name: "NIS2 Directive",
+        url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+        authority: "EU (EUR-Lex)",
+        version: "Directive 2022/2555",
       },
       {
         name: "SOC 2 Methodology",
@@ -65,9 +67,9 @@ export async function about() {
       },
       {
         name: "DORA Implementation",
-        url: "https://www.digital-operational-resilience-act.com/",
-        authority: "ESAs",
-        version: "2022/2554",
+        url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+        authority: "ESAs (EUR-Lex)",
+        version: "Regulation 2022/2554",
       },
       {
         name: "Program Management Practices",
@@ -105,13 +107,13 @@ export async function checkDataFreshness() {
     `|--------|-------------|-----------|--------|`,
     `| NIST CSF 2.0 | 2026-03-12 | Manual | Current |`,
     `| ISO 27001:2022 Methodology | 2026-03-12 | Manual | Current |`,
-    `| NIS2 Implementation | 2026-03-12 | Manual | Current |`,
+    `| NIS2 Directive (EUR-Lex) | 2026-04-26 | Manual | Current |`,
     `| SOC 2 Methodology | 2026-03-12 | Manual | Current |`,
     `| DORA Implementation | 2026-03-12 | Manual | Current |`,
     `| Program Management Practices | 2026-03-12 | Manual | Current |`,
     ``,
-    `Database version: 1.0.0`,
-    `Database built: 2026-03-12`,
+    `Database version: 2.0.0`,
+    `Database built: 2026-04-26`,
     ``,
     `This MCP contains curated methodology content that updates manually.`,
     `Framework methodology changes infrequently -- major updates happen`,

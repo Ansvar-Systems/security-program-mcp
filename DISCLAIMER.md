@@ -3,7 +3,7 @@
 ## Not Professional Advice
 
 This tool provides structured access to security program planning methodologies
-sourced from established industry frameworks (NIST, ISO, ENISA, ISACA, SANS).
+sourced from established industry frameworks (NIST, ISO, EU legislation, ISACA, SANS).
 It is provided for **informational and research purposes only**.
 
 - This is **not professional advice** -- consult qualified security professionals

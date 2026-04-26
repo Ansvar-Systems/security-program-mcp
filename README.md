@@ -44,7 +44,7 @@ docker run -p 3000:3000 security-program-mcp
 
 | Content Type | Count | Description |
 |-------------|-------|-------------|
-| Playbooks | 7 | Multi-phase implementation plans (NIS2, ISO 27001, SOC 2, DORA, NIST CSF, Zero Trust, IR, VulnMgmt) |
+| Playbooks | 6 | Multi-phase implementation plans (ISO 27001, SOC 2, DORA, NIST CSF, Zero Trust, IR, VulnMgmt) |
 | RACI Templates | 8 | Responsibility assignment matrices for security activities |
 | WBS Patterns | 6 | Work breakdown structures for program planning |
 | Milestone Frameworks | 5+ | Phase-gate definitions with success criteria |
@@ -90,12 +90,14 @@ See [TOOLS.md](TOOLS.md) for full parameter documentation.
 |--------|-----------|---------|
 | NIST CSF 2.0 | NIST | Manual (on framework update) |
 | ISO 27001:2022 | ISO (derived methodology) | Manual (on standard update) |
-| NIS2 Directive | ENISA | Manual (on RTS/ITS update) |
+| NIS2 Directive | EUR-Lex (EU legislation) | Manual (on implementing act update) |
 | SOC 2 TSC | AICPA (derived methodology) | Manual (on TSC update) |
-| DORA Regulation | ESAs | Manual (on RTS/ITS update) |
+| DORA Regulation | ESAs (EUR-Lex) | Manual (on RTS/ITS update) |
 | Program Management | ISACA, SANS, (ISC)2 | Manual (quarterly review) |
 
 All content is derived methodology -- not reproduced framework text.
+The NIS2 implementation playbook was removed in v2.0.0 (ENISA NC license incompatibility);
+NIS2 governance and milestone content now cites the directive text via EUR-Lex only.
 Call `check_data_freshness` to verify current data age.
 
 ## Security
