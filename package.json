@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/security-program-mcp",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Security program planning methodologies — implementation playbooks, RACI templates, WBS patterns, milestone frameworks, governance structures. Part of the Ansvar MCP Network (ansvar.ai/mcp)",
   "type": "module",
   "main": "dist/index.js",

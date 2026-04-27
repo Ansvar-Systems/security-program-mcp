@@ -84,7 +84,7 @@ type: milestone_framework
 category: compliance
 title: "NIS2 Compliance Milestone Framework"
 summary: "Phase-gate milestones for NIS2 Directive compliance with success criteria covering scoping, governance, Article 21 implementation, and ongoing compliance."
-source: "NIS2 Directive (EU) 2022/2555, ENISA guidelines"
+source: "NIS2 Directive (EU) 2022/2555 via EUR-Lex"
 tags: "milestones, nis2, compliance, eu, phase-gate, article-21"
 metadata:
   total_milestones: "7"
